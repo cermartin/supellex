@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+
+  /* Supellex Red & Black brand palette */
+  --color-brand-red:       #D62B2B;   /* primary: CTAs, accents, logo swoosh */
+  --color-brand-red-dark:  #A81F1F;   /* hover on red buttons */
+  --color-brand-red-light: #F03E3E;   /* hover highlights */
+  --color-brand-black:     #0D0D0D;   /* dark backgrounds, header */
+  --color-brand-charcoal:  #1A1A1A;   /* section dark bg */
+  --color-brand-smoke:     #2A2A2A;   /* card dark bg */
+  --color-brand-offwhite:  #F5F5F3;   /* page background */
+  --color-brand-bg:        #EFEFED;   /* section light bg */
+  --color-brand-grey:      #8A8A8A;   /* body text, labels */
+  --color-brand-light:     #E0E0DC;   /* borders, dividers */
+  --color-brand-white:     #FFFFFF;
+
+  --animate-fadeIn: fadeIn 0.25s ease-out;
+  --animate-heroUp: heroUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-stockFill: stockFill 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes fadeIn {
+    0%   { opacity: 0; transform: translateY(6px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes heroUp {
+    0%   { opacity: 0; transform: translateY(28px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes stockFill {
+    0%   { width: 0%; }
+    100% { width: var(--stock-pct); }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-offwhite);
+  color: var(--color-brand-black);
+  margin: 0;
+}
