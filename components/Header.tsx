@@ -86,9 +86,9 @@ export default function Header({ onNavClick }: Props) {
           {/* Mobile right — shop now */}
           <button
             onClick={() => handleNav('#products')}
-            className="md:hidden justify-self-end text-xs font-bold tracking-widest uppercase text-brand-red"
+            className="md:hidden justify-self-end text-xs font-bold tracking-widest uppercase bg-brand-red text-white px-4 py-2"
           >
-            Shop
+            Shop Now
           </button>
         </div>
       </header>
@@ -96,6 +96,13 @@ export default function Header({ onNavClick }: Props) {
       {/* Mobile overlay */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center gap-8">
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-5 right-6 text-brand-black hover:text-brand-red transition-colors"
+            aria-label="Close menu"
+          >
+            <X size={28} />
+          </button>
           {NAV_LINKS.map((link) => (
             <button
               key={link.label}

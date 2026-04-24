@@ -104,12 +104,12 @@ export default function ProductGallery({ onProductClick }: Props) {
               <span className="text-brand-red">Furniture</span>
             </h2>
             {/* Category filters */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none" style={{ WebkitOverflowScrolling: 'touch' }}>
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-2 text-xs font-bold tracking-widest uppercase transition-colors border ${
+                  className={`flex-shrink-0 px-4 py-2 text-xs font-bold tracking-widest uppercase transition-colors border ${
                     activeCategory === cat
                       ? 'bg-brand-red border-brand-red text-white'
                       : 'border-brand-light text-brand-grey hover:border-brand-red hover:text-brand-red bg-white'

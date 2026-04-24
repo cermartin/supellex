@@ -35,9 +35,9 @@ export default function BrandStatement() {
         </div>
 
         {/* Three pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-light border border-brand-light">
           {PILLARS.map(({ icon: Icon, title, body }) => (
-            <div key={title} className="text-center px-4">
+            <div key={title} className="text-center px-8 py-10">
               <div className="w-12 h-12 rounded-full bg-brand-red/8 flex items-center justify-center mx-auto mb-5">
                 <Icon size={22} className="text-brand-red" />
               </div>
