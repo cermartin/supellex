@@ -22,8 +22,8 @@ const PILLARS = [
   {
     num: '04',
     icon: ShieldCheck,
-    title: 'Trusted by UK Customers',
-    body: 'Thousands of happy customers across the UK. Full buyer protection and hassle-free returns.',
+    title: 'Buyer Protection & Easy Returns',
+    body: 'Shop with confidence. Full buyer protection, hassle-free returns, and dedicated customer support.',
   },
 ];
 

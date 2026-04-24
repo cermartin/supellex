@@ -51,8 +51,8 @@ export default function Hero({ onShopClick }: Props) {
       <div className="relative z-10 flex flex-wrap justify-center gap-10 text-center border-t border-brand-light pt-10 w-full max-w-lg">
         {[
           { value: 'Free', label: 'UK Delivery' },
-          { value: '5★', label: 'Customer Rated' },
-          { value: '8+', label: 'Products' },
+          { value: 'UK', label: 'Based & Operated' },
+          { value: '9+', label: 'Products' },
         ].map(({ value, label }) => (
           <div key={label}>
             <div className="text-2xl font-black text-brand-black">{value}</div>

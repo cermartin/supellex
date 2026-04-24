@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { PRODUCTS } from '../constants';
 import { Product } from '../types';
 
@@ -59,22 +59,6 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
         <p className="text-brand-grey text-sm leading-relaxed mb-4 line-clamp-2 flex-1">
           {product.description}
         </p>
-
-        {/* Rating */}
-        {product.rating && (
-          <div className="flex items-center gap-1 mb-3">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                size={13}
-                className={i < Math.round(product.rating!) ? 'fill-brand-red text-brand-red' : 'text-brand-light'}
-              />
-            ))}
-            {product.reviewCount && (
-              <span className="text-brand-grey text-xs ml-1">({product.reviewCount})</span>
-            )}
-          </div>
-        )}
 
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-brand-light">
           <span className="text-2xl font-black text-brand-black">{product.price}</span>

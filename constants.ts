@@ -134,8 +134,6 @@ export const PRODUCTS: Product[] = [
       { id: 'oak',   name: 'Oak',   image: 'https://m.media-amazon.com/images/I/812exi6kRWL._AC_SX300_SY300_QL70_ML2_.jpg', stock: 1, price: '£377.99', swatch: '#B8936A' },
       { id: 'black', name: 'Black', image: 'https://m.media-amazon.com/images/I/812exi6kRWL._AC_SX300_SY300_QL70_ML2_.jpg', stock: 1, price: '£377.99', swatch: '#1A1A1A' },
     ],
-    rating: 1,
-    reviewCount: 1,
   },
   {
     id: '7',
@@ -175,8 +173,6 @@ export const PRODUCTS: Product[] = [
       { id: 'white', name: 'White', image: 'https://m.media-amazon.com/images/I/71IwESz54CL._AC_SX300_SY300_QL70_ML2_.jpg', stock: 1, price: '£349.99', swatch: '#F5F5F5' },
       { id: 'black', name: 'Black', image: 'https://m.media-amazon.com/images/I/71IwESz54CL._AC_SX300_SY300_QL70_ML2_.jpg', stock: 1, price: '£349.99', swatch: '#1A1A1A' },
     ],
-    rating: 2,
-    reviewCount: 1,
   },
   {
     id: '9',
@@ -195,8 +191,6 @@ export const PRODUCTS: Product[] = [
       { id: 'white', name: 'White', image: 'https://m.media-amazon.com/images/I/610hyhsbBLL._AC_SY300_SX300_QL70_ML2_.jpg', stock: 2, price: '£319.99', swatch: '#F5F5F5' },
       { id: 'grey',  name: 'Grey',  image: 'https://m.media-amazon.com/images/I/610hyhsbBLL._AC_SY300_SX300_QL70_ML2_.jpg', stock: 1, price: '£319.99', swatch: '#6B6B6B' },
     ],
-    rating: 5,
-    reviewCount: 3,
     badge: 'Top Rated',
   },
 ];
