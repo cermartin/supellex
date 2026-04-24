@@ -35,4 +35,7 @@ export interface NavLink {
 export type Page =
   | { type: 'home' }
   | { type: 'product'; id: string }
+  | { type: 'about' }
+  | { type: 'contact' }
+  | { type: 'shipping' }
   | { type: 'coming-soon' };

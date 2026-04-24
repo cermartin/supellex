@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ShoppingBag, Menu, X } from 'lucide-react';
-import { NAV_LINKS, SHOP_URL } from '../constants';
+import { NAV_LINKS } from '../constants';
 
 interface Props {
   onNavClick?: (href: string) => void;
@@ -71,15 +71,13 @@ export default function Header({ onNavClick }: Props) {
 
           {/* Shop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href={SHOP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => handleNav('#products')}
               className="flex items-center gap-2 bg-brand-red hover:bg-brand-red-dark text-white text-sm font-bold tracking-widest uppercase px-5 py-2.5 transition-colors"
             >
               <ShoppingBag size={16} />
-              Shop Amazon
-            </a>
+              Shop Now
+            </button>
           </div>
 
           {/* Mobile burger */}
@@ -105,16 +103,13 @@ export default function Header({ onNavClick }: Props) {
               {link.label}
             </button>
           ))}
-          <a
-            href={SHOP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setMenuOpen(false)}
+          <button
+            onClick={() => handleNav('#products')}
             className="mt-4 flex items-center gap-2 bg-brand-red hover:bg-brand-red-dark text-white text-base font-bold tracking-widest uppercase px-8 py-4 transition-colors"
           >
             <ShoppingBag size={18} />
-            Shop Amazon
-          </a>
+            Shop Now
+          </button>
         </div>
       )}
     </>

@@ -8,11 +8,20 @@ import ProductDetail from './components/ProductDetail';
 import WhySupellex from './components/WhySupellex';
 import Footer from './components/Footer';
 import BuildBadge from './components/BuildBadge';
+import AboutPage from './components/AboutPage';
+import ContactPage from './components/ContactPage';
+import ShippingPage from './components/ShippingPage';
 
 export default function App() {
   const [page, setPage] = useState<Page>({ type: 'home' });
 
   const handleNavClick = (href: string) => {
+    // Named pages
+    if (href === 'about')    { setPage({ type: 'about' });    window.scrollTo({ top: 0 }); return; }
+    if (href === 'contact')  { setPage({ type: 'contact' });  window.scrollTo({ top: 0 }); return; }
+    if (href === 'shipping') { setPage({ type: 'shipping' }); window.scrollTo({ top: 0 }); return; }
+
+    // Anchor sections — navigate home first if needed
     const scrollToSection = () => {
       const el = document.getElementById(href.replace('#', ''));
       if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -38,19 +47,46 @@ export default function App() {
     }, 50);
   };
 
-  const handleComingSoon = () => setPage({ type: 'coming-soon' });
-
   if (page.type === 'product') {
     const product = PRODUCTS.find((p) => p.id === page.id);
     if (!product) return null;
     return (
       <>
         <Header onNavClick={handleNavClick} />
-        <ProductDetail
-          product={product}
-          onBack={handleBack}
-          onComingSoon={handleComingSoon}
-        />
+        <ProductDetail product={product} onBack={handleBack} />
+        <Footer onNavClick={handleNavClick} />
+        <BuildBadge />
+      </>
+    );
+  }
+
+  if (page.type === 'about') {
+    return (
+      <>
+        <Header onNavClick={handleNavClick} />
+        <AboutPage />
+        <Footer onNavClick={handleNavClick} />
+        <BuildBadge />
+      </>
+    );
+  }
+
+  if (page.type === 'contact') {
+    return (
+      <>
+        <Header onNavClick={handleNavClick} />
+        <ContactPage />
+        <Footer onNavClick={handleNavClick} />
+        <BuildBadge />
+      </>
+    );
+  }
+
+  if (page.type === 'shipping') {
+    return (
+      <>
+        <Header onNavClick={handleNavClick} />
+        <ShippingPage />
         <Footer onNavClick={handleNavClick} />
         <BuildBadge />
       </>
@@ -62,28 +98,24 @@ export default function App() {
       <>
         <Header onNavClick={handleNavClick} />
         <div className="min-h-screen flex flex-col items-center justify-center bg-brand-black text-white px-6 text-center">
-          <div className="mb-6">
-            <div className="w-16 h-1 bg-brand-red mx-auto mb-8" />
-            <h1 className="text-5xl font-black tracking-tight mb-4">Coming Soon</h1>
-            <p className="text-brand-grey text-lg max-w-md">
-              This product listing will be available very soon. In the meantime, browse our full range on Amazon UK.
-            </p>
-          </div>
-          <div className="flex gap-4 mt-8">
+          <div className="w-16 h-1 bg-brand-red mx-auto mb-8" />
+          <h1 className="text-5xl font-black tracking-tight mb-4">Coming Soon</h1>
+          <p className="text-brand-grey text-lg max-w-md mb-10">
+            This product will be available to purchase very soon. Check back shortly.
+          </p>
+          <div className="flex gap-4">
             <button
               onClick={() => setPage({ type: 'home' })}
               className="px-6 py-3 border border-white/20 text-white hover:border-brand-red hover:text-brand-red transition-colors text-sm font-semibold tracking-widest uppercase"
             >
               Back Home
             </button>
-            <a
-              href="https://www.amazon.co.uk/s?k=Supellex&i=kitchen&search-type=ss"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => handleNavClick('contact')}
               className="px-6 py-3 bg-brand-red hover:bg-brand-red-dark text-white transition-colors text-sm font-semibold tracking-widest uppercase"
             >
-              Shop on Amazon
-            </a>
+              Contact Us
+            </button>
           </div>
         </div>
         <BuildBadge />

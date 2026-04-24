@@ -1,5 +1,5 @@
 import { ShoppingBag, ChevronDown } from 'lucide-react';
-import { SHOP_URL, PRODUCTS } from '../constants';
+import { PRODUCTS } from '../constants';
 
 interface Props {
   onShopClick: () => void;
@@ -54,19 +54,17 @@ export default function Hero({ onShopClick }: Props) {
           <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={onShopClick}
-              className="px-8 py-4 bg-brand-red hover:bg-brand-red-dark text-white font-bold tracking-widest uppercase text-sm transition-colors"
+              className="flex items-center gap-2 px-8 py-4 bg-brand-red hover:bg-brand-red-dark text-white font-bold tracking-widest uppercase text-sm transition-colors"
+            >
+              <ShoppingBag size={16} />
+              Shop Now
+            </button>
+            <button
+              onClick={onShopClick}
+              className="px-8 py-4 border border-white/20 hover:border-brand-red text-white hover:text-brand-red font-bold tracking-widest uppercase text-sm transition-colors"
             >
               View Collection
             </button>
-            <a
-              href={SHOP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-8 py-4 border border-white/20 hover:border-brand-red text-white hover:text-brand-red font-bold tracking-widest uppercase text-sm transition-colors"
-            >
-              <ShoppingBag size={16} />
-              Shop on Amazon
-            </a>
           </div>
 
           {/* Stats */}

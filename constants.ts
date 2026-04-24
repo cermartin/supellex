@@ -1,11 +1,14 @@
 import { Product, NavLink } from './types';
 
-export const SHOP_URL = 'https://www.amazon.co.uk/s?k=Supellex&i=kitchen&search-type=ss&ref=bl_dp_s_web_0';
+export const CONTACT_EMAIL = 'info@supellex.co.uk';
+export const SHOP_EMAIL = 'shop@supellex.co.uk';
 
 export const NAV_LINKS: NavLink[] = [
   { label: 'Products', href: '#products' },
   { label: 'Why Supellex', href: '#why' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Shipping & Returns', href: 'shipping' },
+  { label: 'About', href: 'about' },
+  { label: 'Contact', href: 'contact' },
 ];
 
 // Placeholder images — replace with real product imports once images are added to /images/
@@ -26,12 +29,11 @@ export const PRODUCTS: Product[] = [
     dimensions: 'Available in 4 sizes',
     totalMade: 20,
     stock: 8,
-    buyUrl: SHOP_URL,
     variants: [
-      { id: 'oak',      name: 'Oak',     image: PH(11), stock: 3, price: '£519.99', swatch: '#B8936A', buyUrl: SHOP_URL },
-      { id: 'black',    name: 'Black',   image: PH(12), stock: 2, price: '£519.99', swatch: '#1A1A1A', buyUrl: SHOP_URL },
-      { id: 'grey',     name: 'Grey',    image: PH(13), stock: 2, price: '£519.99', swatch: '#6B6B6B', buyUrl: SHOP_URL },
-      { id: 'graphite', name: 'Graphite',image: PH(14), stock: 1, price: '£519.99', swatch: '#3D3D3D', buyUrl: SHOP_URL },
+      { id: 'oak',      name: 'Oak',      image: PH(11), stock: 3, price: '£519.99', swatch: '#B8936A' },
+      { id: 'black',    name: 'Black',    image: PH(12), stock: 2, price: '£519.99', swatch: '#1A1A1A' },
+      { id: 'grey',     name: 'Grey',     image: PH(13), stock: 2, price: '£519.99', swatch: '#6B6B6B' },
+      { id: 'graphite', name: 'Graphite', image: PH(14), stock: 1, price: '£519.99', swatch: '#3D3D3D' },
     ],
     badge: 'Best Seller',
   },
@@ -48,12 +50,11 @@ export const PRODUCTS: Product[] = [
     dimensions: 'Available in 6 sizes',
     totalMade: 30,
     stock: 5,
-    buyUrl: SHOP_URL,
     variants: [
-      { id: 'black', name: 'Black', image: PH(21), stock: 2, price: '£319.99', swatch: '#1A1A1A', buyUrl: SHOP_URL },
-      { id: 'white', name: 'White', image: PH(22), stock: 1, price: '£319.99', swatch: '#F5F5F5', buyUrl: SHOP_URL },
-      { id: 'grey',  name: 'Grey',  image: PH(23), stock: 1, price: '£319.99', swatch: '#6B6B6B', buyUrl: SHOP_URL },
-      { id: 'oak',   name: 'Oak',   image: PH(24), stock: 1, price: '£319.99', swatch: '#B8936A', buyUrl: SHOP_URL },
+      { id: 'black', name: 'Black', image: PH(21), stock: 2, price: '£319.99', swatch: '#1A1A1A' },
+      { id: 'white', name: 'White', image: PH(22), stock: 1, price: '£319.99', swatch: '#F5F5F5' },
+      { id: 'grey',  name: 'Grey',  image: PH(23), stock: 1, price: '£319.99', swatch: '#6B6B6B' },
+      { id: 'oak',   name: 'Oak',   image: PH(24), stock: 1, price: '£319.99', swatch: '#B8936A' },
     ],
     badge: 'Only 5 left',
   },
@@ -70,7 +71,6 @@ export const PRODUCTS: Product[] = [
     dimensions: 'W: 80cm × D: 40cm × H: 150cm',
     totalMade: 15,
     stock: 5,
-    buyUrl: SHOP_URL,
     badge: 'Only 5 left',
   },
   {
@@ -86,11 +86,10 @@ export const PRODUCTS: Product[] = [
     dimensions: 'Available in 3 sizes',
     totalMade: 20,
     stock: 14,
-    buyUrl: SHOP_URL,
     variants: [
-      { id: 'white', name: 'White',    image: PH(41), stock: 8, price: '£394.99', swatch: '#F5F5F5', buyUrl: SHOP_URL },
-      { id: 'grey',  name: 'Grey',     image: PH(42), stock: 4, price: '£394.99', swatch: '#6B6B6B', buyUrl: SHOP_URL },
-      { id: 'black', name: 'Black',    image: PH(43), stock: 2, price: '£419.99', swatch: '#1A1A1A', buyUrl: SHOP_URL },
+      { id: 'white', name: 'White', image: PH(41), stock: 8, price: '£394.99', swatch: '#F5F5F5' },
+      { id: 'grey',  name: 'Grey',  image: PH(42), stock: 4, price: '£394.99', swatch: '#6B6B6B' },
+      { id: 'black', name: 'Black', image: PH(43), stock: 2, price: '£419.99', swatch: '#1A1A1A' },
     ],
     badge: 'Only 14 left',
   },
@@ -107,12 +106,11 @@ export const PRODUCTS: Product[] = [
     dimensions: 'Available in 6 sizes',
     totalMade: 25,
     stock: 5,
-    buyUrl: SHOP_URL,
     variants: [
-      { id: 'white',    name: 'White',    image: PH(51), stock: 2, price: '£343.99', swatch: '#F5F5F5', buyUrl: SHOP_URL },
-      { id: 'black',    name: 'Black',    image: PH(52), stock: 1, price: '£343.99', swatch: '#1A1A1A', buyUrl: SHOP_URL },
-      { id: 'grey',     name: 'Grey',     image: PH(53), stock: 1, price: '£343.99', swatch: '#6B6B6B', buyUrl: SHOP_URL },
-      { id: 'oak',      name: 'Oak',      image: PH(54), stock: 1, price: '£343.99', swatch: '#B8936A', buyUrl: SHOP_URL },
+      { id: 'white', name: 'White', image: PH(51), stock: 2, price: '£343.99', swatch: '#F5F5F5' },
+      { id: 'black', name: 'Black', image: PH(52), stock: 1, price: '£343.99', swatch: '#1A1A1A' },
+      { id: 'grey',  name: 'Grey',  image: PH(53), stock: 1, price: '£343.99', swatch: '#6B6B6B' },
+      { id: 'oak',   name: 'Oak',   image: PH(54), stock: 1, price: '£343.99', swatch: '#B8936A' },
     ],
     badge: 'Only 5 left',
   },
@@ -129,7 +127,6 @@ export const PRODUCTS: Product[] = [
     dimensions: 'Available in 4 sizes',
     totalMade: 20,
     stock: 10,
-    buyUrl: SHOP_URL,
   },
   {
     id: '7',
@@ -144,10 +141,9 @@ export const PRODUCTS: Product[] = [
     dimensions: 'Available in 5 sizes',
     totalMade: 20,
     stock: 8,
-    buyUrl: SHOP_URL,
     variants: [
-      { id: 'black', name: 'Black', image: PH(71), stock: 4, price: '£367.99', swatch: '#1A1A1A', buyUrl: SHOP_URL },
-      { id: 'white', name: 'White', image: PH(72), stock: 4, price: '£367.99', swatch: '#F5F5F5', buyUrl: SHOP_URL },
+      { id: 'black', name: 'Black', image: PH(71), stock: 4, price: '£367.99', swatch: '#1A1A1A' },
+      { id: 'white', name: 'White', image: PH(72), stock: 4, price: '£367.99', swatch: '#F5F5F5' },
     ],
   },
   {
@@ -159,11 +155,10 @@ export const PRODUCTS: Product[] = [
     description:
       'Wooden frame bunk bed with safety rails and ladder. Double or triple sleeper. With or without mattress.',
     details:
-      'A safe, sturdy and space-saving solution for children\'s bedrooms. Solid wooden frame with smooth rounded edges, integrated safety rails, and a secure ladder. Choose double or triple sleeper configuration, and add a mattress bundle for complete convenience.',
+      "A safe, sturdy and space-saving solution for children's bedrooms. Solid wooden frame with smooth rounded edges, integrated safety rails, and a secure ladder. Choose double or triple sleeper configuration, and add a mattress bundle for complete convenience.",
     dimensions: 'Available in 4 configurations',
     totalMade: 10,
     stock: 3,
-    buyUrl: SHOP_URL,
     rating: 5.0,
     reviewCount: 3,
     badge: 'Top Rated',

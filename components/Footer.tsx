@@ -1,5 +1,5 @@
-import { ShoppingBag } from 'lucide-react';
-import { NAV_LINKS, SHOP_URL } from '../constants';
+import { Mail } from 'lucide-react';
+import { NAV_LINKS, CONTACT_EMAIL, SHOP_EMAIL } from '../constants';
 
 interface Props {
   onNavClick?: (href: string) => void;
@@ -8,7 +8,6 @@ interface Props {
 export default function Footer({ onNavClick }: Props) {
   return (
     <footer id="contact" className="bg-brand-black text-white">
-      {/* Red accent top */}
       <div className="h-1 bg-brand-red" />
 
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -24,8 +23,7 @@ export default function Footer({ onNavClick }: Props) {
               <span className="font-black text-lg tracking-wider uppercase">supellex</span>
             </div>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs">
-              Premium bedroom furniture designed for the modern British home. Sliding wardrobes,
-              vanity tables, bunk beds and more — available on Amazon UK.
+              Premium bedroom furniture designed for the modern British home. Sliding wardrobes, vanity tables, bunk beds and more.
             </p>
           </div>
 
@@ -46,28 +44,39 @@ export default function Footer({ onNavClick }: Props) {
             </ul>
           </div>
 
-          {/* Shop */}
+          {/* Contact */}
           <div>
-            <h3 className="text-xs font-bold tracking-[0.25em] uppercase text-brand-red mb-5">Shop</h3>
-            <p className="text-white/40 text-sm mb-5 leading-relaxed">
-              All products are sold via Amazon UK with full buyer protection, secure payments, and reliable UK delivery.
-            </p>
-            <a
-              href={SHOP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-dark text-white text-sm font-bold tracking-widest uppercase px-6 py-3 transition-colors"
-            >
-              <ShoppingBag size={16} />
-              Shop on Amazon
-            </a>
+            <h3 className="text-xs font-bold tracking-[0.25em] uppercase text-brand-red mb-5">Contact</h3>
+            <div className="space-y-3">
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="flex items-center gap-2 text-white/50 hover:text-white text-sm transition-colors"
+              >
+                <Mail size={14} className="text-brand-red flex-shrink-0" />
+                {CONTACT_EMAIL}
+              </a>
+              <a
+                href={`mailto:${SHOP_EMAIL}`}
+                className="flex items-center gap-2 text-white/50 hover:text-white text-sm transition-colors"
+              >
+                <Mail size={14} className="text-brand-red flex-shrink-0" />
+                {SHOP_EMAIL}
+              </a>
+            </div>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="mt-16 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-xs">
           <span>© {new Date().getFullYear()} Supellex. All rights reserved.</span>
-          <span>Delivered across the UK · Available on Amazon UK</span>
+          <div className="flex gap-6">
+            <button onClick={() => onNavClick?.('shipping')} className="hover:text-white/60 transition-colors">
+              Shipping & Returns
+            </button>
+            <button onClick={() => onNavClick?.('contact')} className="hover:text-white/60 transition-colors">
+              Contact
+            </button>
+          </div>
         </div>
       </div>
     </footer>

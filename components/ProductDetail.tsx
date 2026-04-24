@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { ArrowLeft, ShoppingBag, Star, Truck, Shield, RotateCcw } from 'lucide-react';
 import { Product, ProductVariant } from '../types';
+import { CONTACT_EMAIL } from '../constants';
 
 interface Props {
   product: Product;
   onBack: () => void;
-  onComingSoon: () => void;
 }
 
-export default function ProductDetail({ product, onBack, onComingSoon }: Props) {
+export default function ProductDetail({ product, onBack }: Props) {
   const [activeVariant, setActiveVariant] = useState<ProductVariant | null>(
     product.variants?.[0] ?? null
   );
@@ -21,7 +21,6 @@ export default function ProductDetail({ product, onBack, onComingSoon }: Props) 
 
   const displayPrice = activeVariant?.price ?? product.price;
   const displayImage = activeVariant?.image ?? product.image;
-  const buyUrl = activeVariant?.buyUrl ?? product.buyUrl;
 
   return (
     <div className="min-h-screen bg-brand-offwhite pt-24">
@@ -162,25 +161,13 @@ export default function ProductDetail({ product, onBack, onComingSoon }: Props) 
             </div>
 
             {/* Buy button */}
-            {buyUrl ? (
-              <a
-                href={buyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 w-full py-4 bg-brand-red hover:bg-brand-red-dark text-white font-black tracking-widest uppercase text-sm transition-colors mb-3"
-              >
-                <ShoppingBag size={18} />
-                Buy on Amazon
-              </a>
-            ) : (
-              <button
-                onClick={onComingSoon}
-                className="flex items-center justify-center gap-3 w-full py-4 bg-brand-charcoal hover:bg-brand-smoke text-white font-black tracking-widest uppercase text-sm transition-colors mb-3"
-              >
-                <ShoppingBag size={18} />
-                Purchase
-              </button>
-            )}
+            <a
+              href={`mailto:${CONTACT_EMAIL}?subject=Order Enquiry — ${encodeURIComponent(product.name)}`}
+              className="flex items-center justify-center gap-3 w-full py-4 bg-brand-red hover:bg-brand-red-dark text-white font-black tracking-widest uppercase text-sm transition-colors mb-3"
+            >
+              <ShoppingBag size={18} />
+              Order Now
+            </a>
 
             {/* Description */}
             <div className="mt-8 pt-6 border-t border-brand-light">
