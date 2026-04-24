@@ -1,11 +1,20 @@
 import { useState } from 'react';
-import { ArrowLeft, ShoppingBag, Star, Truck, Shield, RotateCcw } from 'lucide-react';
+import { ArrowLeft, ShoppingBag, Truck, Shield, RotateCcw } from 'lucide-react';
 import { Product, ProductVariant } from '../types';
 import { CONTACT_EMAIL } from '../constants';
 
 interface Props {
   product: Product;
   onBack: () => void;
+}
+
+function getDeliveryWindow() {
+  const start = new Date();
+  start.setDate(start.getDate() + 4);
+  const end = new Date();
+  end.setDate(end.getDate() + 7);
+  const fmt = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  return `${fmt(start)} – ${fmt(end)}`;
 }
 
 export default function ProductDetail({ product, onBack }: Props) {
@@ -21,6 +30,9 @@ export default function ProductDetail({ product, onBack }: Props) {
 
   const displayPrice = activeVariant?.price ?? product.price;
   const displayImage = activeVariant?.image ?? product.image;
+
+  const orderSubject = `Order Enquiry — ${product.name}${activeVariant ? ` (${activeVariant.name})` : ''}`;
+  const orderBody = `Hi, I'd like to order:\n\nProduct: ${product.name}\nColour: ${activeVariant?.name ?? 'N/A'}\nPrice: ${displayPrice}\n\nPlease let me know next steps. Thanks.`;
 
   return (
     <div className="min-h-screen bg-brand-offwhite pt-24">
@@ -39,7 +51,6 @@ export default function ProductDetail({ product, onBack }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* LEFT — Images */}
           <div>
-            {/* Main image */}
             <div className="aspect-[4/3] bg-brand-bg overflow-hidden mb-4 relative">
               <img
                 src={displayImage}
@@ -54,7 +65,6 @@ export default function ProductDetail({ product, onBack }: Props) {
               )}
             </div>
 
-            {/* Variant image thumbnails */}
             {product.variants && product.variants.length > 1 && (
               <div className="flex gap-3 overflow-x-auto pb-1">
                 {product.variants.map((v) => (
@@ -74,7 +84,6 @@ export default function ProductDetail({ product, onBack }: Props) {
 
           {/* RIGHT — Info */}
           <div className="animate-fadeIn">
-            {/* Category */}
             <div className="inline-flex items-center gap-2 mb-3">
               <div className="w-6 h-px bg-brand-red" />
               <span className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase">
@@ -86,25 +95,6 @@ export default function ProductDetail({ product, onBack }: Props) {
               {product.name}
             </h1>
 
-            {/* Rating */}
-            {product.rating && (
-              <div className="flex items-center gap-2 mb-4">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={16}
-                      className={i < Math.round(product.rating!) ? 'fill-brand-red text-brand-red' : 'text-brand-light'}
-                    />
-                  ))}
-                </div>
-                {product.reviewCount && (
-                  <span className="text-brand-grey text-sm">{product.reviewCount} reviews</span>
-                )}
-              </div>
-            )}
-
-            {/* Price */}
             <div className="text-4xl font-black text-brand-black mb-6">
               {displayPrice}
               <span className="text-sm font-normal text-brand-grey ml-2">incl. VAT</span>
@@ -160,24 +150,26 @@ export default function ProductDetail({ product, onBack }: Props) {
               </div>
             </div>
 
-            {/* Buy button */}
+            {/* Order button */}
             <a
-              href={`mailto:${CONTACT_EMAIL}?subject=Order Enquiry — ${encodeURIComponent(product.name)}`}
+              href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(orderSubject)}&body=${encodeURIComponent(orderBody)}`}
               className="flex items-center justify-center gap-3 w-full py-4 bg-brand-red hover:bg-brand-red-dark text-white font-black tracking-widest uppercase text-sm transition-colors mb-3"
             >
               <ShoppingBag size={18} />
               Order Now
             </a>
+            <p className="text-center text-xs text-brand-grey mb-8">
+              We'll confirm your order and arrange delivery within 24 hours.
+            </p>
 
-            {/* Description */}
-            <div className="mt-8 pt-6 border-t border-brand-light">
+            {/* Product details */}
+            <div className="mt-2 pt-6 border-t border-brand-light">
               <h2 className="text-sm font-black tracking-widest uppercase text-brand-black mb-3">
                 Product Details
               </h2>
               <p className="text-brand-grey leading-relaxed text-sm">{product.details}</p>
             </div>
 
-            {/* Dimensions */}
             {product.dimensions && (
               <div className="mt-4 pt-4 border-t border-brand-light">
                 <div className="flex justify-between text-sm">
@@ -190,9 +182,9 @@ export default function ProductDetail({ product, onBack }: Props) {
             {/* Trust badges */}
             <div className="mt-8 grid grid-cols-3 gap-4">
               {[
-                { icon: Truck, label: 'Free UK Delivery', sub: '29 Apr – 2 May' },
-                { icon: Shield, label: 'Secure Payment', sub: 'via Amazon' },
-                { icon: RotateCcw, label: 'Easy Returns', sub: 'Amazon policy' },
+                { icon: Truck, label: 'Free UK Delivery', sub: getDeliveryWindow() },
+                { icon: Shield, label: 'Secure Order', sub: 'Confirmed by email' },
+                { icon: RotateCcw, label: 'Easy Returns', sub: '30-day policy' },
               ].map(({ icon: Icon, label, sub }) => (
                 <div key={label} className="flex flex-col items-center text-center gap-1.5 p-3 bg-white border border-brand-light">
                   <Icon size={20} className="text-brand-red" />

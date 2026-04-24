@@ -77,7 +77,8 @@ export default function ContactPage() {
                 e.preventDefault();
                 const form = e.target as HTMLFormElement;
                 const data = new FormData(form);
-                window.location.href = `mailto:info@supellex.co.uk?subject=Enquiry from ${data.get('name')}&body=${data.get('message')}`;
+                const body = `From: ${data.get('name')} <${data.get('email')}>\n\n${data.get('message')}`;
+                window.location.href = `mailto:info@supellex.co.uk?subject=${encodeURIComponent(`Enquiry from ${data.get('name')}`)}&body=${encodeURIComponent(body)}`;
               }}
               className="space-y-4"
             >
