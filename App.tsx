@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import ProductGallery from './components/ProductGallery';
 import ProductDetail from './components/ProductDetail';
+import BrandStatement from './components/BrandStatement';
 import WhySupellex from './components/WhySupellex';
 import Footer from './components/Footer';
 import BuildBadge from './components/BuildBadge';
@@ -127,6 +128,7 @@ export default function App() {
     <>
       <Header onNavClick={handleNavClick} />
       <Hero onShopClick={() => handleNavClick('#products')} />
+      <BrandStatement />
       <ProductGallery onProductClick={handleProductClick} />
       <WhySupellex />
       <Footer onNavClick={handleNavClick} />

@@ -1,11 +1,11 @@
-import { Zap, Layers, Ruler, Star } from 'lucide-react';
+import { Zap, Layers, Ruler, ShieldCheck } from 'lucide-react';
 
 const PILLARS = [
   {
     num: '01',
     icon: Zap,
     title: 'Integrated LED Lighting',
-    body: 'Built-in LED strips illuminate your interior for effortless, stylish organisation — day or night.',
+    body: 'Built-in LED strips illuminate your wardrobe interior for effortless, stylish organisation — day or night.',
   },
   {
     num: '02',
@@ -21,28 +21,23 @@ const PILLARS = [
   },
   {
     num: '04',
-    icon: Star,
-    title: 'Trusted on Amazon UK',
-    body: 'Thousands of happy customers across the UK. Sold and fulfilled through Amazon with full buyer protection.',
+    icon: ShieldCheck,
+    title: 'Trusted by UK Customers',
+    body: 'Thousands of happy customers across the UK. Full buyer protection and hassle-free returns.',
   },
 ];
 
 export default function WhySupellex() {
   return (
-    <section id="why" className="py-24 bg-brand-charcoal">
+    <section id="why" className="py-24 bg-brand-bg">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-16 max-w-xl">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-8 h-px bg-brand-red" />
-            <span className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase">
-              Why Supellex
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
-            Furniture That Works
+          <div className="w-10 h-0.5 bg-brand-red mb-6" />
+          <h2 className="font-serif text-4xl md:text-5xl text-brand-black leading-tight">
+            Why customers
             <br />
-            <span className="text-brand-red">As Hard As You Do.</span>
+            <span className="text-brand-red">choose Supellex</span>
           </h2>
         </div>
 
@@ -51,16 +46,16 @@ export default function WhySupellex() {
           {PILLARS.map(({ num, icon: Icon, title, body }) => (
             <div
               key={num}
-              className="group p-8 bg-brand-smoke border border-white/5 hover:border-brand-red/40 transition-colors"
+              className="group p-8 bg-white border border-brand-light hover:border-brand-red/30 transition-colors"
             >
-              <div className="text-5xl font-black text-white/5 group-hover:text-brand-red/10 transition-colors mb-4 leading-none select-none">
+              <div className="text-5xl font-black text-brand-light group-hover:text-brand-red/10 transition-colors mb-4 leading-none select-none">
                 {num}
               </div>
-              <div className="w-10 h-10 bg-brand-red/10 group-hover:bg-brand-red/20 flex items-center justify-center mb-5 transition-colors">
+              <div className="w-10 h-10 bg-brand-red/8 group-hover:bg-brand-red/15 flex items-center justify-center mb-5 transition-colors">
                 <Icon size={20} className="text-brand-red" />
               </div>
-              <h3 className="text-white font-black text-lg mb-3 leading-snug">{title}</h3>
-              <p className="text-white/40 text-sm leading-relaxed">{body}</p>
+              <h3 className="text-brand-black font-black text-base mb-3 leading-snug">{title}</h3>
+              <p className="text-brand-grey text-sm leading-relaxed">{body}</p>
             </div>
           ))}
         </div>
