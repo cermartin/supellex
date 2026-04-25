@@ -2,8 +2,8 @@
 @plugin "tailwindcss-animate";
 
 @theme {
-  --font-sans: 'Montserrat', sans-serif;
-  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
 
   /* Supellex Red & Black brand palette */
   --color-brand-red:       #D62B2B;   /* primary: CTAs, accents, logo swoosh */
