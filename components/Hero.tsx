@@ -19,11 +19,27 @@ export default function Hero({ onShopClick }: Props) {
       </p>
 
       {/* Headline */}
-      <h1 className="relative z-10 font-serif text-5xl md:text-7xl lg:text-8xl text-brand-black leading-tight tracking-tight mb-8 max-w-3xl">
+      <h1 className="relative z-10 font-serif text-5xl md:text-7xl lg:text-8xl text-brand-black leading-tight tracking-tight mb-10 max-w-3xl">
         Your bedroom,
         <br />
         <em className="not-italic text-brand-red">beautifully</em> arranged.
       </h1>
+
+      {/* Accent band */}
+      <div className="relative z-10 w-full max-w-2xl mb-10">
+        <div className="bg-brand-black px-8 py-5 flex flex-wrap items-center justify-center gap-6 md:gap-10">
+          {[
+            'Sliding Wardrobes',
+            'Vanity Tables',
+            'Kids Beds',
+          ].map((item, i) => (
+            <span key={item} className="flex items-center gap-6">
+              <span className="text-white text-xs font-bold tracking-[0.2em] uppercase">{item}</span>
+              {i < 2 && <span className="w-1 h-1 rounded-full bg-brand-red" />}
+            </span>
+          ))}
+        </div>
+      </div>
 
       {/* Sub-copy */}
       <p className="relative z-10 text-brand-grey text-lg md:text-xl leading-relaxed max-w-xl mb-12">
