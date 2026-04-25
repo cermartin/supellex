@@ -29,12 +29,12 @@ const PILLARS = [
 
 export default function WhySupellex() {
   return (
-    <section id="why" className="py-24 bg-brand-bg">
+    <section id="why" className="py-24 bg-brand-charcoal">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="mb-16 max-w-xl">
           <div className="w-10 h-0.5 bg-brand-red mb-6" />
-          <h2 className="font-serif text-4xl md:text-5xl text-brand-black leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight">
             Why customers
             <br />
             <span className="text-brand-red">choose Supellex</span>
@@ -46,16 +46,16 @@ export default function WhySupellex() {
           {PILLARS.map(({ num, icon: Icon, title, body }) => (
             <div
               key={num}
-              className="group p-8 bg-white border border-brand-light hover:border-brand-red/30 transition-colors"
+              className="group p-8 bg-brand-smoke border border-white/8 hover:border-brand-red/50 transition-colors"
             >
-              <div className="text-5xl font-black text-brand-light group-hover:text-brand-red/10 transition-colors mb-4 leading-none select-none">
+              <div className="text-5xl font-black text-white/5 group-hover:text-brand-red/15 transition-colors mb-4 leading-none select-none">
                 {num}
               </div>
-              <div className="w-10 h-10 bg-brand-red/8 group-hover:bg-brand-red/15 flex items-center justify-center mb-5 transition-colors">
+              <div className="w-10 h-10 bg-brand-red/20 group-hover:bg-brand-red/30 flex items-center justify-center mb-5 transition-colors">
                 <Icon size={20} className="text-brand-red" />
               </div>
-              <h3 className="text-brand-black font-black text-base mb-3 leading-snug">{title}</h3>
-              <p className="text-brand-grey text-sm leading-relaxed">{body}</p>
+              <h3 className="text-white font-black text-base mb-3 leading-snug">{title}</h3>
+              <p className="text-white/40 text-sm leading-relaxed">{body}</p>
             </div>
           ))}
         </div>

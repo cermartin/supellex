@@ -87,7 +87,7 @@ export default function ProductGallery({ onProductClick }: Props) {
       : PRODUCTS.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="products" className="py-24 bg-brand-offwhite">
+    <section id="products" className="py-24 bg-brand-bg">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
         <div className="mb-14">
