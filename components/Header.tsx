@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
 
 interface Props {
@@ -25,7 +25,7 @@ export default function Header({ onNavClick }: Props) {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
-          isScrolled ? 'py-3 shadow-md shadow-black/8' : 'py-4 border-b border-brand-light'
+          isScrolled ? 'py-2 shadow-md shadow-black/8' : 'py-3 border-b border-brand-light'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 items-center">
@@ -42,7 +42,7 @@ export default function Header({ onNavClick }: Props) {
             ))}
           </nav>
 
-          {/* Mobile burger — left on mobile */}
+          {/* Mobile burger — left */}
           <button
             className="md:hidden text-brand-black p-1 justify-self-start"
             onClick={() => setMenuOpen((o) => !o)}
@@ -51,20 +51,23 @@ export default function Header({ onNavClick }: Props) {
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
 
-          {/* Logo — centre */}
+          {/* Logo — centre, bigger */}
           <button
             onClick={() => handleNav('#')}
-            className="flex justify-center items-center focus:outline-none"
+            className="flex flex-col justify-center items-center focus:outline-none"
             aria-label="Supellex home"
           >
             <img
               src="/supellex-logo.jpg"
               alt="Supellex"
-              className="h-10 w-auto object-contain"
+              className="h-14 w-auto object-contain"
             />
+            <span className="text-[9px] tracking-[0.18em] text-brand-grey uppercase font-medium -mt-1 hidden md:block">
+              One Home At a Time…
+            </span>
           </button>
 
-          {/* Right side — remaining nav + CTA on desktop */}
+          {/* Right side — nav + search icon */}
           <div className="hidden md:flex items-center justify-end gap-7">
             {NAV_LINKS.slice(3).map((link) => (
               <button
@@ -77,18 +80,20 @@ export default function Header({ onNavClick }: Props) {
             ))}
             <button
               onClick={() => handleNav('#products')}
-              className="bg-brand-red hover:bg-brand-red-dark text-white text-xs font-bold tracking-widest uppercase px-5 py-2.5 transition-colors"
+              className="text-brand-black/60 hover:text-brand-red transition-colors"
+              aria-label="Search products"
             >
-              Shop Now
+              <Search size={18} />
             </button>
           </div>
 
-          {/* Mobile right — shop now */}
+          {/* Mobile right — search icon */}
           <button
             onClick={() => handleNav('#products')}
-            className="md:hidden justify-self-end text-xs font-bold tracking-widest uppercase bg-brand-red text-white px-4 py-2"
+            className="md:hidden justify-self-end text-brand-black/60 hover:text-brand-red transition-colors p-1"
+            aria-label="Search products"
           >
-            Shop Now
+            <Search size={20} />
           </button>
         </div>
       </header>
@@ -103,6 +108,10 @@ export default function Header({ onNavClick }: Props) {
           >
             <X size={28} />
           </button>
+          <div className="mb-4 text-center">
+            <img src="/supellex-logo.jpg" alt="Supellex" className="h-16 w-auto mx-auto mb-1" />
+            <span className="text-[9px] tracking-[0.18em] text-brand-grey uppercase font-medium">One Home At a Time…</span>
+          </div>
           {NAV_LINKS.map((link) => (
             <button
               key={link.label}
@@ -116,7 +125,7 @@ export default function Header({ onNavClick }: Props) {
             onClick={() => handleNav('#products')}
             className="mt-4 bg-brand-red hover:bg-brand-red-dark text-white text-base font-bold tracking-widest uppercase px-8 py-4 transition-colors"
           >
-            Shop Now
+            Explore Collection
           </button>
         </div>
       )}

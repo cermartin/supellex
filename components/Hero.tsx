@@ -15,7 +15,7 @@ export default function Hero({ onShopClick }: Props) {
 
       {/* Tag line */}
       <p className="relative z-10 text-brand-red text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-4">
-        Premium Bedroom Furniture · Crafted for British Homes
+        Premium Bedroom Furniture · One Home At a Time…
       </p>
 
       {/* Headline */}
