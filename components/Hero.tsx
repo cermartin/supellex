@@ -26,10 +26,10 @@ export default function Hero({ onShopClick }: Props) {
       </h1>
 
       {/* Accent band */}
-      <div className="relative z-10 w-full max-w-xl mb-5">
-        <div className="bg-brand-black px-6 py-3.5 flex items-center justify-center gap-4 md:gap-8">
-          {['Sliding Wardrobes', 'Vanity Tables', 'Kids Beds'].map((item, i) => (
-            <span key={item} className="flex items-center gap-4 md:gap-8">
+      <div className="relative z-10 w-full max-w-xl mb-5 px-6">
+        <div className="bg-brand-black px-4 py-3.5 flex items-center justify-center gap-3 md:gap-8">
+          {['Wardrobes', 'Vanity Tables', 'Kids Beds'].map((item, i) => (
+            <span key={item} className="flex items-center gap-3 md:gap-8">
               <span className="text-white text-[9px] md:text-xs font-bold tracking-[0.2em] uppercase whitespace-nowrap">{item}</span>
               {i < 2 && <span className="w-1 h-1 rounded-full bg-brand-red flex-shrink-0" />}
             </span>
