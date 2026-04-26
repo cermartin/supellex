@@ -59,9 +59,9 @@ export default function Footer({ onNavClick }: Props) {
       <div className="h-1 bg-brand-red" />
 
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="md:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Brand + social icons */}
+          <div>
             <div className="flex items-center gap-3 mb-4">
               <svg width="40" height="40" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="22" cy="22" r="22" fill="white" />
@@ -73,7 +73,7 @@ export default function Footer({ onNavClick }: Props) {
             <p className="text-white/40 text-sm leading-relaxed max-w-xs mb-6">
               Premium bedroom furniture designed for the modern British home. Sliding wardrobes, vanity tables, bunk beds and more.
             </p>
-            {/* Social icons */}
+            {/* Social icons only — no labels */}
             <div className="flex items-center gap-4">
               {SOCIALS.map(({ label, href, icon }) => (
                 <a
@@ -136,25 +136,6 @@ export default function Footer({ onNavClick }: Props) {
                 </svg>
                 +44 7391 858618
               </a>
-            </div>
-          </div>
-
-          {/* Social handles */}
-          <div>
-            <h3 className="text-xs font-bold tracking-[0.25em] uppercase text-brand-red mb-5">Follow Us</h3>
-            <div className="space-y-3">
-              {SOCIALS.map(({ label, href, icon }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-white/50 hover:text-white text-sm transition-colors group"
-                >
-                  <span className="text-brand-red group-hover:text-white transition-colors">{icon}</span>
-                  {label === 'Instagram' || label === 'TikTok' ? '@supellexltd' : label}
-                </a>
-              ))}
             </div>
           </div>
         </div>

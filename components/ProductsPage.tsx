@@ -45,9 +45,6 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
             View <ArrowRight size={15} />
           </span>
         </div>
-        {product.variants && (
-          <div className="text-brand-grey text-xs mt-2">{product.variants.length} colour options available</div>
-        )}
       </div>
     </div>
   );

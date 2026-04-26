@@ -65,9 +65,9 @@ export default function Header({ onNavClick, onProductClick, cartCount = 0, onCa
             <img
               src="/supellex-logo.png"
               alt="Supellex"
-              className="h-14 w-auto object-contain"
+              className="h-20 w-auto object-contain mix-blend-multiply"
             />
-            <span className="text-[10px] tracking-[0.18em] text-brand-grey uppercase font-bold -mt-1 hidden md:block">
+            <span className="text-[10px] tracking-[0.18em] text-brand-grey font-bold -mt-1 hidden md:block">
               One Home At a Time…
             </span>
           </button>
@@ -140,8 +140,8 @@ export default function Header({ onNavClick, onProductClick, cartCount = 0, onCa
             <X size={28} />
           </button>
           <div className="mb-4 text-center">
-            <img src="/supellex-logo.png" alt="Supellex" className="h-16 w-auto mx-auto mb-1" />
-            <span className="text-[10px] tracking-[0.18em] text-brand-grey uppercase font-bold">One Home At a Time…</span>
+            <img src="/supellex-logo.png" alt="Supellex" className="h-20 w-auto mx-auto mb-1 mix-blend-multiply" />
+            <span className="text-[10px] tracking-[0.18em] text-brand-grey font-bold">One Home At a Time…</span>
           </div>
           {NAV_LINKS.map((link) => (
             <button

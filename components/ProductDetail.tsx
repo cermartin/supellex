@@ -22,12 +22,6 @@ export default function ProductDetail({ product, onBack }: Props) {
     product.variants?.[0] ?? null
   );
 
-  const currentStock = activeVariant ? activeVariant.stock : (product.stock ?? 0);
-  const totalMade = product.totalMade ?? 20;
-  const stockPct = Math.min(100, Math.round((currentStock / totalMade) * 100));
-  const stockColor =
-    currentStock <= 2 ? 'bg-brand-red' : currentStock <= 4 ? 'bg-amber-500' : 'bg-emerald-500';
-
   const displayPrice = activeVariant?.price ?? product.price;
   const displayImage = activeVariant?.image ?? product.image;
 
@@ -123,32 +117,6 @@ export default function ProductDetail({ product, onBack }: Props) {
                 </div>
               </div>
             )}
-
-            {/* Stock urgency bar */}
-            <div className="mb-6 p-4 bg-white border border-brand-light">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-xs font-bold tracking-widest uppercase text-brand-grey">
-                  Availability
-                </span>
-                <span
-                  className={`text-xs font-bold ${
-                    currentStock <= 2 ? 'text-brand-red' : currentStock <= 4 ? 'text-amber-600' : 'text-emerald-600'
-                  }`}
-                >
-                  {currentStock <= 2
-                    ? `Only ${currentStock} left!`
-                    : currentStock <= 4
-                    ? `Low stock — ${currentStock} remaining`
-                    : `${currentStock} in stock`}
-                </span>
-              </div>
-              <div className="w-full h-1.5 bg-brand-light rounded-full overflow-hidden">
-                <div
-                  className={`h-full rounded-full animate-stockFill ${stockColor}`}
-                  style={{ '--stock-pct': `${stockPct}%` } as React.CSSProperties}
-                />
-              </div>
-            </div>
 
             {/* Order button */}
             <a
