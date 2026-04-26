@@ -4,9 +4,11 @@ import { PRODUCTS } from './constants';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProductGallery from './components/ProductGallery';
+import ProductsPage from './components/ProductsPage';
 import ProductDetail from './components/ProductDetail';
 import BrandStatement from './components/BrandStatement';
 import WhySupellex from './components/WhySupellex';
+import WhySupellexPage from './components/WhySupellexPage';
 import Footer from './components/Footer';
 import BuildBadge from './components/BuildBadge';
 import AboutPage from './components/AboutPage';
@@ -17,21 +19,15 @@ export default function App() {
   const [page, setPage] = useState<Page>({ type: 'home' });
 
   const handleNavClick = (href: string) => {
-    // Named pages
+    if (href === 'products') { setPage({ type: 'products' }); window.scrollTo({ top: 0 }); return; }
+    if (href === 'why')      { setPage({ type: 'why' });      window.scrollTo({ top: 0 }); return; }
     if (href === 'about')    { setPage({ type: 'about' });    window.scrollTo({ top: 0 }); return; }
     if (href === 'contact')  { setPage({ type: 'contact' });  window.scrollTo({ top: 0 }); return; }
     if (href === 'shipping') { setPage({ type: 'shipping' }); window.scrollTo({ top: 0 }); return; }
 
-    // Anchor sections — navigate home first if needed
-    const scrollToSection = () => {
-      const el = document.getElementById(href.replace('#', ''));
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    };
+    // Home anchor (logo click or '#')
     if (page.type !== 'home') {
       setPage({ type: 'home' });
-      setTimeout(scrollToSection, 50);
-    } else {
-      scrollToSection();
     }
   };
 
@@ -41,11 +37,8 @@ export default function App() {
   };
 
   const handleBack = () => {
-    setPage({ type: 'home' });
-    setTimeout(() => {
-      const el = document.getElementById('products');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }, 50);
+    setPage({ type: 'products' });
+    window.scrollTo({ top: 0 });
   };
 
   if (page.type === 'product') {
@@ -53,8 +46,30 @@ export default function App() {
     if (!product) return null;
     return (
       <>
-        <Header onNavClick={handleNavClick} />
+        <Header onNavClick={handleNavClick} onProductClick={handleProductClick} />
         <ProductDetail product={product} onBack={handleBack} />
+        <Footer onNavClick={handleNavClick} />
+        <BuildBadge />
+      </>
+    );
+  }
+
+  if (page.type === 'products') {
+    return (
+      <>
+        <Header onNavClick={handleNavClick} onProductClick={handleProductClick} />
+        <ProductsPage onProductClick={handleProductClick} />
+        <Footer onNavClick={handleNavClick} />
+        <BuildBadge />
+      </>
+    );
+  }
+
+  if (page.type === 'why') {
+    return (
+      <>
+        <Header onNavClick={handleNavClick} onProductClick={handleProductClick} />
+        <WhySupellexPage />
         <Footer onNavClick={handleNavClick} />
         <BuildBadge />
       </>
@@ -64,7 +79,7 @@ export default function App() {
   if (page.type === 'about') {
     return (
       <>
-        <Header onNavClick={handleNavClick} />
+        <Header onNavClick={handleNavClick} onProductClick={handleProductClick} />
         <AboutPage />
         <Footer onNavClick={handleNavClick} />
         <BuildBadge />
@@ -75,7 +90,7 @@ export default function App() {
   if (page.type === 'contact') {
     return (
       <>
-        <Header onNavClick={handleNavClick} />
+        <Header onNavClick={handleNavClick} onProductClick={handleProductClick} />
         <ContactPage />
         <Footer onNavClick={handleNavClick} />
         <BuildBadge />
@@ -86,7 +101,7 @@ export default function App() {
   if (page.type === 'shipping') {
     return (
       <>
-        <Header onNavClick={handleNavClick} />
+        <Header onNavClick={handleNavClick} onProductClick={handleProductClick} />
         <ShippingPage />
         <Footer onNavClick={handleNavClick} />
         <BuildBadge />
@@ -97,7 +112,7 @@ export default function App() {
   if (page.type === 'coming-soon') {
     return (
       <>
-        <Header onNavClick={handleNavClick} />
+        <Header onNavClick={handleNavClick} onProductClick={handleProductClick} />
         <div className="min-h-screen flex flex-col items-center justify-center bg-brand-black text-white px-6 text-center">
           <div className="w-16 h-1 bg-brand-red mx-auto mb-8" />
           <h1 className="text-5xl font-black tracking-tight mb-4">Coming Soon</h1>
@@ -126,8 +141,8 @@ export default function App() {
 
   return (
     <>
-      <Header onNavClick={handleNavClick} />
-      <Hero onShopClick={() => handleNavClick('#products')} />
+      <Header onNavClick={handleNavClick} onProductClick={handleProductClick} />
+      <Hero onShopClick={() => handleNavClick('products')} />
       <BrandStatement />
       <ProductGallery onProductClick={handleProductClick} />
       <WhySupellex />
