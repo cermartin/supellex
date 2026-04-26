@@ -6,7 +6,7 @@ interface Props {
 
 export default function Hero({ onShopClick }: Props) {
   return (
-    <section className="relative h-screen min-h-[600px] max-h-[1000px] bg-brand-offwhite flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+    <section className="relative h-screen min-h-[600px] max-h-[1000px] bg-brand-offwhite flex flex-col items-center justify-center text-center px-6 overflow-hidden pt-20">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-brand-offwhite to-brand-bg pointer-events-none" />
 
@@ -28,7 +28,7 @@ export default function Hero({ onShopClick }: Props) {
       {/* Accent band */}
       <div className="relative z-10 w-full max-w-xl mb-5 px-6">
         <div className="bg-brand-black px-4 py-3.5 flex items-center justify-center gap-3 md:gap-8">
-          {['Wardrobes', 'Vanity Tables', 'Kids Beds'].map((item, i) => (
+          {['Premium Quality', 'UK Based', 'Expert Craftsmanship'].map((item, i) => (
             <span key={item} className="flex items-center gap-3 md:gap-8">
               <span className="text-white text-[9px] md:text-xs font-bold tracking-[0.2em] uppercase whitespace-nowrap">{item}</span>
               {i < 2 && <span className="w-1 h-1 rounded-full bg-brand-red flex-shrink-0" />}
@@ -62,9 +62,9 @@ export default function Hero({ onShopClick }: Props) {
       {/* Trust strip */}
       <div className="relative z-10 flex justify-center gap-8 md:gap-12 text-center border-t border-brand-light pt-6 w-full max-w-sm">
         {[
-          { value: 'Free', label: 'UK Delivery' },
+          { value: 'Nationwide', label: 'Delivery' },
           { value: 'UK', label: 'Based & Operated' },
-          { value: '9+', label: 'Products' },
+          { value: '50+', label: 'Products' },
         ].map(({ value, label }) => (
           <div key={label}>
             <div className="text-lg md:text-xl font-black text-brand-black">{value}</div>

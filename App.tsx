@@ -14,6 +14,8 @@ import BuildBadge from './components/BuildBadge';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import ShippingPage from './components/ShippingPage';
+import ReviewsPage from './components/ReviewsPage';
+import FAQPage from './components/FAQPage';
 
 export default function App() {
   const [page, setPage] = useState<Page>({ type: 'home' });
@@ -24,6 +26,8 @@ export default function App() {
     if (href === 'about')    { setPage({ type: 'about' });    window.scrollTo({ top: 0 }); return; }
     if (href === 'contact')  { setPage({ type: 'contact' });  window.scrollTo({ top: 0 }); return; }
     if (href === 'shipping') { setPage({ type: 'shipping' }); window.scrollTo({ top: 0 }); return; }
+    if (href === 'reviews')  { setPage({ type: 'reviews' });  window.scrollTo({ top: 0 }); return; }
+    if (href === 'faq')      { setPage({ type: 'faq' });      window.scrollTo({ top: 0 }); return; }
 
     // Home anchor (logo click or '#')
     if (page.type !== 'home') {
@@ -103,6 +107,28 @@ export default function App() {
       <>
         <Header onNavClick={handleNavClick} onProductClick={handleProductClick} />
         <ShippingPage />
+        <Footer onNavClick={handleNavClick} />
+        <BuildBadge />
+      </>
+    );
+  }
+
+  if (page.type === 'reviews') {
+    return (
+      <>
+        <Header onNavClick={handleNavClick} onProductClick={handleProductClick} />
+        <ReviewsPage />
+        <Footer onNavClick={handleNavClick} />
+        <BuildBadge />
+      </>
+    );
+  }
+
+  if (page.type === 'faq') {
+    return (
+      <>
+        <Header onNavClick={handleNavClick} onProductClick={handleProductClick} />
+        <FAQPage />
         <Footer onNavClick={handleNavClick} />
         <BuildBadge />
       </>

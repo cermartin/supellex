@@ -62,13 +62,13 @@ export default function Footer({ onNavClick }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand + social icons */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <svg width="40" height="40" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="22" cy="22" r="22" fill="white" />
-                <path d="M8 16 Q22 10 36 16" stroke="#D62B2B" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-                <path d="M8 28 Q22 34 36 28" stroke="#D62B2B" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-              </svg>
-              <span className="font-black text-lg tracking-wider uppercase">supellex</span>
+            <div className="mb-4">
+              <img
+                src="/supellex-logo.png"
+                alt="Supellex"
+                className="h-16 w-auto object-contain mix-blend-screen mb-2"
+              />
+              <p className="text-white/60 text-[10px] tracking-[0.2em] font-bold">One Home At a Time…</p>
             </div>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs mb-6">
               Premium bedroom furniture designed for the modern British home. Sliding wardrobes, vanity tables, bunk beds and more.
@@ -143,9 +143,15 @@ export default function Footer({ onNavClick }: Props) {
         {/* Bottom bar */}
         <div className="mt-16 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-xs">
           <span>© {new Date().getFullYear()} Supellex. All rights reserved.</span>
-          <div className="flex gap-6">
+          <div className="flex gap-6 flex-wrap justify-center">
             <button onClick={() => onNavClick?.('shipping')} className="hover:text-white/60 transition-colors">
               Shipping & Returns
+            </button>
+            <button onClick={() => onNavClick?.('reviews')} className="hover:text-white/60 transition-colors">
+              Reviews
+            </button>
+            <button onClick={() => onNavClick?.('faq')} className="hover:text-white/60 transition-colors">
+              FAQs
             </button>
             <button onClick={() => onNavClick?.('contact')} className="hover:text-white/60 transition-colors">
               Contact

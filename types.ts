@@ -40,4 +40,6 @@ export type Page =
   | { type: 'about' }
   | { type: 'contact' }
   | { type: 'shipping' }
+  | { type: 'reviews' }
+  | { type: 'faq' }
   | { type: 'coming-soon' };

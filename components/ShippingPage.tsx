@@ -23,7 +23,7 @@ export default function ShippingPage() {
         {/* Quick summary cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { icon: Truck,     title: 'Free Delivery', body: 'On all UK orders' },
+            { icon: Truck,     title: 'Nationwide Delivery', body: 'Across the UK' },
             { icon: Clock,     title: '2–5 Days',       body: 'Standard delivery' },
             { icon: RotateCcw, title: '30-Day Returns', body: 'Hassle-free policy' },
             { icon: Shield,    title: 'Fully Insured',  body: 'Every shipment covered' },
@@ -55,7 +55,7 @@ export default function ShippingPage() {
             </div>
             <div>
               <h3 className="font-black text-brand-black text-base mb-2">Delivery Cost</h3>
-              <p>We offer free standard delivery on all orders. No hidden charges.</p>
+              <p>We offer nationwide delivery across the UK. Delivery charges may apply to certain remote areas — contact us for details before ordering.</p>
             </div>
             <div>
               <h3 className="font-black text-brand-black text-base mb-2">Large Items</h3>

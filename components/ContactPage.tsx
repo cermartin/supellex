@@ -33,9 +33,9 @@ export default function ContactPage() {
                 },
                 {
                   icon: Mail,
-                  title: 'Orders & Shopping',
-                  value: 'shop@supellex.co.uk',
-                  href: 'mailto:shop@supellex.co.uk',
+                  title: 'Customer Support',
+                  value: 'support@supellex.co.uk',
+                  href: 'mailto:support@supellex.co.uk',
                 },
                 {
                   icon: Clock,

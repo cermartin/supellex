@@ -52,9 +52,9 @@ export default function ProductDetail({ product, onBack }: Props) {
                 className="w-full h-full object-cover animate-fadeIn"
                 key={displayImage}
               />
-              {product.badge && (
+              {product.badge === 'Best Seller' && (
                 <div className="absolute top-4 left-4 bg-brand-red text-white text-xs font-bold tracking-widest uppercase px-3 py-1">
-                  {product.badge}
+                  Best Seller
                 </div>
               )}
             </div>

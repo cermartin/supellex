@@ -14,9 +14,9 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
         />
-        {product.badge && (
+        {product.badge === 'Best Seller' && (
           <div className="absolute top-4 left-4 bg-brand-red text-white text-xs font-bold tracking-widest uppercase px-3 py-1.5">
-            {product.badge}
+            Best Seller
           </div>
         )}
         {product.variants && product.variants.length > 0 && (

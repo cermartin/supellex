@@ -1,7 +1,7 @@
 import { Product, NavLink } from './types';
 
 export const CONTACT_EMAIL = 'info@supellex.co.uk';
-export const SHOP_EMAIL = 'shop@supellex.co.uk';
+export const SHOP_EMAIL = 'support@supellex.co.uk';
 
 export const NAV_LINKS: NavLink[] = [
   { label: 'Products', href: 'products' },
@@ -31,7 +31,6 @@ export const PRODUCTS: Product[] = [
       { id: 'grey',     name: 'Grey',     image: 'https://m.media-amazon.com/images/I/71wVg64P3QL._AC_SX300_SY300_QL70_ML2_.jpg', stock: 2, price: '£519.99', swatch: '#6B6B6B' },
       { id: 'oak',      name: 'Oak',      image: 'https://m.media-amazon.com/images/I/71wVg64P3QL._AC_SX300_SY300_QL70_ML2_.jpg', stock: 1, price: '£519.99', swatch: '#B8936A' },
     ],
-    badge: 'Best Seller',
   },
   {
     id: '2',
@@ -52,7 +51,7 @@ export const PRODUCTS: Product[] = [
       { id: 'grey',  name: 'Grey',  image: 'https://m.media-amazon.com/images/I/71ZJ+vMDOqL._AC_SX300_SY300_QL70_ML2_.jpg', stock: 1, price: '£515.99', swatch: '#6B6B6B' },
       { id: 'oak',   name: 'Oak',   image: 'https://m.media-amazon.com/images/I/71ZJ+vMDOqL._AC_SX300_SY300_QL70_ML2_.jpg', stock: 1, price: '£515.99', swatch: '#B8936A' },
     ],
-    badge: 'Only 5 left',
+    badge: 'Best Seller',
   },
   {
     id: '3',
@@ -73,7 +72,6 @@ export const PRODUCTS: Product[] = [
       { id: 'grey',  name: 'Grey',  image: 'https://m.media-amazon.com/images/I/71m-V1+7bzL._AC_SX300_SY300_QL70_ML2_.jpg', stock: 3, price: '£374.99', swatch: '#6B6B6B' },
       { id: 'oak',   name: 'Oak',   image: 'https://m.media-amazon.com/images/I/71m-V1+7bzL._AC_SX300_SY300_QL70_ML2_.jpg', stock: 1, price: '£374.99', swatch: '#B8936A' },
     ],
-    badge: 'Only 14 left',
   },
   {
     id: '4',
@@ -153,7 +151,6 @@ export const PRODUCTS: Product[] = [
       { id: 'white', name: 'White', image: 'https://m.media-amazon.com/images/I/61WHxZXrvnL._AC_SY300_SX300_QL70_ML2_.jpg', stock: 2, price: '£299.99', swatch: '#F5F5F5' },
       { id: 'black', name: 'Black', image: 'https://m.media-amazon.com/images/I/61WHxZXrvnL._AC_SY300_SX300_QL70_ML2_.jpg', stock: 1, price: '£299.99', swatch: '#1A1A1A' },
     ],
-    badge: 'Only 5 left',
   },
   {
     id: '8',
@@ -191,6 +188,5 @@ export const PRODUCTS: Product[] = [
       { id: 'white', name: 'White', image: 'https://m.media-amazon.com/images/I/610hyhsbBLL._AC_SY300_SX300_QL70_ML2_.jpg', stock: 2, price: '£319.99', swatch: '#F5F5F5' },
       { id: 'grey',  name: 'Grey',  image: 'https://m.media-amazon.com/images/I/610hyhsbBLL._AC_SY300_SX300_QL70_ML2_.jpg', stock: 1, price: '£319.99', swatch: '#6B6B6B' },
     ],
-    badge: 'Top Rated',
   },
 ];

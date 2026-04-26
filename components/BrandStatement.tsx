@@ -13,8 +13,8 @@ const PILLARS = [
   },
   {
     icon: Truck,
-    title: 'Free UK Delivery',
-    body: 'We ship across the UK at no extra cost. Your new furniture arrives carefully packaged and ready to assemble.',
+    title: 'Nationwide Delivery',
+    body: 'We ship across the UK. Your new furniture arrives carefully packaged and ready to assemble.',
   },
 ];
 
