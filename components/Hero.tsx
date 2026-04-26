@@ -25,16 +25,14 @@ export default function Hero({ onShopClick }: Props) {
         <em className="not-italic text-brand-red">beautifully</em> arranged.
       </h1>
 
-      {/* Accent band — wraps on mobile, no overflow */}
-      <div className="relative z-10 w-full max-w-lg mb-5 px-4">
-        <div className="bg-brand-black px-6 py-3.5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-          {['Premium Quality', 'UK Based', 'Expert Craftsmanship'].map((item, i) => (
-            <span key={item} className="flex items-center gap-6">
-              <span className="text-white text-[9px] md:text-[11px] font-bold tracking-[0.18em] uppercase">{item}</span>
-              {i < 2 && <span className="w-1 h-1 rounded-full bg-brand-red flex-shrink-0 hidden sm:block" />}
-            </span>
-          ))}
-        </div>
+      {/* Pillars — clean inline row, no heavy block */}
+      <div className="relative z-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-5">
+        {['Premium Quality', 'UK Based', 'Expert Craftsmanship'].map((item, i) => (
+          <span key={item} className="flex items-center gap-6">
+            <span className="text-brand-grey text-[10px] md:text-xs font-bold tracking-[0.18em] uppercase">{item}</span>
+            {i < 2 && <span className="w-1 h-1 rounded-full bg-brand-red/50 flex-shrink-0" />}
+          </span>
+        ))}
       </div>
 
       {/* Sub-copy */}
@@ -60,7 +58,7 @@ export default function Hero({ onShopClick }: Props) {
       </div>
 
       {/* Trust strip */}
-      <div className="relative z-10 flex justify-center gap-8 md:gap-12 text-center border-t border-brand-light pt-6 w-full max-w-sm">
+      <div className="relative z-10 flex justify-center gap-8 md:gap-16 text-center border-t border-brand-light pt-6 w-full max-w-md">
         {[
           { value: 'Nationwide', label: 'Delivery' },
           { value: 'UK', label: 'Based & Operated' },
