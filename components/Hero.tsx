@@ -6,15 +6,15 @@ interface Props {
 
 export default function Hero({ onShopClick }: Props) {
   return (
-    <section className="relative h-screen min-h-[600px] max-h-[1000px] bg-brand-offwhite flex flex-col items-center justify-center text-center px-6 overflow-hidden pt-20">
+    <section className="relative h-screen min-h-[600px] max-h-[1000px] bg-brand-offwhite flex flex-col items-center justify-center text-center px-6 overflow-hidden pt-24">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-brand-offwhite to-brand-bg pointer-events-none" />
 
       {/* Decorative red line */}
       <div className="relative z-10 w-10 h-0.5 bg-brand-red mx-auto mb-4" />
 
-      {/* Tag line */}
-      <p className="relative z-10 text-brand-red text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-4">
+      {/* Eyebrow — NOT uppercase, as written */}
+      <p className="relative z-10 text-brand-red text-[10px] md:text-xs font-bold tracking-[0.25em] mb-4">
         Premium Bedroom Furniture · One Home At a Time…
       </p>
 
@@ -25,13 +25,13 @@ export default function Hero({ onShopClick }: Props) {
         <em className="not-italic text-brand-red">beautifully</em> arranged.
       </h1>
 
-      {/* Accent band */}
-      <div className="relative z-10 w-full max-w-xl mb-5 px-6">
-        <div className="bg-brand-black px-4 py-3.5 flex items-center justify-center gap-3 md:gap-8">
+      {/* Accent band — wraps on mobile, no overflow */}
+      <div className="relative z-10 w-full max-w-lg mb-5 px-4">
+        <div className="bg-brand-black px-6 py-3.5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           {['Premium Quality', 'UK Based', 'Expert Craftsmanship'].map((item, i) => (
-            <span key={item} className="flex items-center gap-3 md:gap-8">
-              <span className="text-white text-[9px] md:text-xs font-bold tracking-[0.2em] uppercase whitespace-nowrap">{item}</span>
-              {i < 2 && <span className="w-1 h-1 rounded-full bg-brand-red flex-shrink-0" />}
+            <span key={item} className="flex items-center gap-6">
+              <span className="text-white text-[9px] md:text-[11px] font-bold tracking-[0.18em] uppercase">{item}</span>
+              {i < 2 && <span className="w-1 h-1 rounded-full bg-brand-red flex-shrink-0 hidden sm:block" />}
             </span>
           ))}
         </div>

@@ -58,7 +58,7 @@ export default function Header({ onNavClick, onProductClick, cartCount = 0, onCa
 
           {/* Logo — centre */}
           <button
-            onClick={() => handleNav('#')}
+            onClick={() => { setMenuOpen(false); onNavClick?.(''); }}
             className="flex flex-col justify-center items-center focus:outline-none"
             aria-label="Supellex home"
           >

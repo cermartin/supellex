@@ -63,11 +63,13 @@ export default function Footer({ onNavClick }: Props) {
           {/* Brand + social icons */}
           <div>
             <div className="mb-4">
-              <img
-                src="/supellex-logo.png"
-                alt="Supellex"
-                className="h-16 w-auto object-contain mix-blend-screen mb-2"
-              />
+              <div className="inline-block bg-white px-3 py-1.5 mb-3">
+                <img
+                  src="/supellex-logo.png"
+                  alt="Supellex"
+                  className="h-10 w-auto object-contain"
+                />
+              </div>
               <p className="text-white/60 text-[10px] tracking-[0.2em] font-bold">One Home At a Time…</p>
             </div>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs mb-6">

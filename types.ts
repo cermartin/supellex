@@ -31,15 +31,3 @@ export interface NavLink {
   label: string;
   href: string;
 }
-
-export type Page =
-  | { type: 'home' }
-  | { type: 'products' }
-  | { type: 'why' }
-  | { type: 'product'; id: string }
-  | { type: 'about' }
-  | { type: 'contact' }
-  | { type: 'shipping' }
-  | { type: 'reviews' }
-  | { type: 'faq' }
-  | { type: 'coming-soon' };

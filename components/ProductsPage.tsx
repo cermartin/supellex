@@ -74,7 +74,7 @@ export default function ProductsPage({ onProductClick }: Props) {
             The Full Collection
           </h1>
           <p className="text-brand-grey text-base mt-3 max-w-lg">
-            {PRODUCTS.length} products across wardrobes, vanity tables and beds — all delivered free across the UK.
+            50+ products across wardrobes, vanity tables and beds — delivered nationwide across the UK.
           </p>
         </div>
 

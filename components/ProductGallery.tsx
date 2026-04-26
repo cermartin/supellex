@@ -8,6 +8,7 @@ const FEATURED_IDS = ['1', '7', '9'];
 
 interface Props {
   onProductClick: (id: string) => void;
+  onBrowseAll?: () => void;
 }
 
 function ProductCard({ product, onClick, large = false }: { product: Product; onClick: () => void; large?: boolean }) {
@@ -65,7 +66,7 @@ function ProductCard({ product, onClick, large = false }: { product: Product; on
   );
 }
 
-export default function ProductGallery({ onProductClick }: Props) {
+export default function ProductGallery({ onProductClick, onBrowseAll }: Props) {
   const [showAll, setShowAll] = useState(false);
   const [activeCategory, setActiveCategory] = useState('All');
 
@@ -107,10 +108,10 @@ export default function ProductGallery({ onProductClick }: Props) {
         {!showAll && (
           <div className="mt-16 text-center">
             <p className="text-brand-grey text-sm mb-5">
-              We carry {PRODUCTS.length} products across wardrobes, dressing tables and beds.
+              We carry 50+ products across wardrobes, dressing tables and beds.
             </p>
             <button
-              onClick={() => setShowAll(true)}
+              onClick={() => onBrowseAll ? onBrowseAll() : setShowAll(true)}
               className="inline-flex items-center gap-3 px-10 py-4 border-2 border-brand-black text-brand-black font-bold tracking-widest uppercase text-sm hover:bg-brand-black hover:text-white transition-colors"
             >
               Browse the Full Collection <ChevronDown size={16} />
