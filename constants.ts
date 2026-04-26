@@ -6,7 +6,7 @@ export const SHOP_EMAIL = 'support@supellex.co.uk';
 export const NAV_LINKS: NavLink[] = [
   { label: 'Products', href: 'products' },
   { label: 'Why Supellex', href: 'why' },
-  { label: 'Reviews', href: 'reviews' },
+  { label: 'FAQs', href: 'faq' },
   { label: 'About', href: 'about' },
   { label: 'Contact', href: 'contact' },
 ];

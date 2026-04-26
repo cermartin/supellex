@@ -1,11 +1,9 @@
 import { useState } from 'react';
-import { Star } from 'lucide-react';
 
 interface Review {
   id: number;
   name: string;
   product: string;
-  rating: number;
   date: string;
   body: string;
 }
@@ -15,7 +13,6 @@ const INITIAL_REVIEWS: Review[] = [
     id: 1,
     name: 'Sarah M.',
     product: 'Sliding Wardrobe with LED & Drawers',
-    rating: 5,
     date: '12 Mar 2025',
     body: 'Absolutely stunning wardrobe. The LED lighting inside makes such a difference — feels so premium. Delivery was smooth and the packaging was excellent. Would highly recommend Supellex to anyone.',
   },
@@ -23,7 +20,6 @@ const INITIAL_REVIEWS: Review[] = [
     id: 2,
     name: 'James T.',
     product: 'Modern Sliding Door Wardrobe with Mirror & LED Light',
-    rating: 5,
     date: '28 Feb 2025',
     body: 'Best Seller for a reason. The mirror doors make the room look twice the size. Very solid build quality, no wobbling or cheap feeling at all. Great value for the price.',
   },
@@ -31,7 +27,6 @@ const INITIAL_REVIEWS: Review[] = [
     id: 3,
     name: 'Priya K.',
     product: 'Vanity Dressing Table with LED Lighted Mirror',
-    rating: 5,
     date: '14 Jan 2025',
     body: 'Exactly what I was looking for. The Hollywood mirror lighting is perfect for makeup. Drawers are smooth and spacious. Really happy with the purchase — delivery was faster than expected too.',
   },
@@ -39,7 +34,6 @@ const INITIAL_REVIEWS: Review[] = [
     id: 4,
     name: 'Daniel R.',
     product: 'Bunk Bed for Kids',
-    rating: 4,
     date: '5 Dec 2024',
     body: 'Really well made bunk bed. The kids love it. Safety rails are solid and the ladder is secure. Assembly took about 2 hours but instructions were clear. Would buy again.',
   },
@@ -47,32 +41,15 @@ const INITIAL_REVIEWS: Review[] = [
     id: 5,
     name: 'Emma L.',
     product: 'Sliding Wardrobe with Mirror Doors',
-    rating: 5,
     date: '19 Nov 2024',
     body: 'Completely transformed my bedroom. The finish is immaculate and the sliding mechanism is buttery smooth. Customer service was really helpful when I had a query. Five stars without hesitation.',
   },
 ];
 
-function Stars({ count, size = 16 }: { count: number; size?: number }) {
-  return (
-    <div className="flex items-center gap-0.5">
-      {[1, 2, 3, 4, 5].map((n) => (
-        <Star
-          key={n}
-          size={size}
-          className={n <= count ? 'text-brand-red fill-brand-red' : 'text-brand-light fill-brand-light'}
-        />
-      ))}
-    </div>
-  );
-}
-
 export default function ReviewsPage() {
   const [reviews, setReviews] = useState<Review[]>(INITIAL_REVIEWS);
-  const [form, setForm] = useState({ name: '', product: '', rating: 5, body: '' });
+  const [form, setForm] = useState({ name: '', product: '', body: '' });
   const [submitted, setSubmitted] = useState(false);
-
-  const avg = (reviews.reduce((s, r) => s + r.rating, 0) / reviews.length).toFixed(1);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -81,12 +58,11 @@ export default function ReviewsPage() {
       id: Date.now(),
       name: form.name.trim(),
       product: form.product.trim() || 'Supellex Product',
-      rating: form.rating,
       date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }),
       body: form.body.trim(),
     };
     setReviews([newReview, ...reviews]);
-    setForm({ name: '', product: '', rating: 5, body: '' });
+    setForm({ name: '', product: '', body: '' });
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
   };
@@ -104,11 +80,7 @@ export default function ReviewsPage() {
           <h1 className="text-5xl md:text-6xl font-black text-white leading-tight mb-6">
             What Our <span className="text-brand-red">Customers</span> Say
           </h1>
-          <div className="flex items-center gap-4">
-            <Stars count={5} size={22} />
-            <span className="text-white text-2xl font-black">{avg}</span>
-            <span className="text-white/40 text-sm">from {reviews.length} reviews</span>
-          </div>
+          <p className="text-white/50 text-sm">{reviews.length} verified reviews</p>
         </div>
       </div>
 
@@ -127,8 +99,7 @@ export default function ReviewsPage() {
                   </div>
                   <span className="text-brand-grey text-xs flex-shrink-0">{r.date}</span>
                 </div>
-                <Stars count={r.rating} />
-                <p className="text-brand-grey text-sm leading-relaxed mt-3">{r.body}</p>
+                <p className="text-brand-grey text-sm leading-relaxed">{r.body}</p>
               </div>
             ))}
           </div>
@@ -165,24 +136,6 @@ export default function ReviewsPage() {
                     placeholder="Which product did you buy?"
                     className="w-full border border-brand-light px-4 py-3 text-sm focus:outline-none focus:border-brand-red transition-colors"
                   />
-                </div>
-                <div>
-                  <label className="text-xs font-bold tracking-widest uppercase text-brand-grey block mb-2">Rating *</label>
-                  <div className="flex items-center gap-1">
-                    {[1, 2, 3, 4, 5].map(n => (
-                      <button
-                        key={n}
-                        type="button"
-                        onClick={() => setForm(f => ({ ...f, rating: n }))}
-                        className="p-0.5"
-                      >
-                        <Star
-                          size={24}
-                          className={n <= form.rating ? 'text-brand-red fill-brand-red' : 'text-brand-light'}
-                        />
-                      </button>
-                    ))}
-                  </div>
                 </div>
                 <div>
                   <label className="text-xs font-bold tracking-widest uppercase text-brand-grey block mb-2">Your Review *</label>
