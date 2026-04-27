@@ -3,6 +3,33 @@ import { Menu, X, Search, ShoppingBag } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
 import SearchOverlay from './SearchOverlay';
 
+function SupellexLogo({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 500 280" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      {/* Top swoosh — thick, sweeping left-to-right arc above text */}
+      <path
+        d="M55 118 C80 30, 280 -10, 420 75"
+        stroke="#C0392B" strokeWidth="38" strokeLinecap="round" fill="none"
+      />
+      {/* Bottom swoosh — thick, sweeping left-to-right arc below text */}
+      <path
+        d="M80 205 C220 295, 400 260, 445 185"
+        stroke="#C0392B" strokeWidth="38" strokeLinecap="round" fill="none"
+      />
+      {/* supellex wordmark */}
+      <text
+        x="250" y="195"
+        textAnchor="middle"
+        fontFamily="'Arial Black', 'Arial Bold', Arial, sans-serif"
+        fontWeight="900"
+        fontSize="110"
+        fill="#111111"
+        letterSpacing="-3"
+      >supellex</text>
+    </svg>
+  );
+}
+
 interface Props {
   onNavClick?: (href: string) => void;
   onProductClick?: (id: string) => void;
@@ -62,11 +89,7 @@ export default function Header({ onNavClick, onProductClick, cartCount = 0, onCa
             className="flex flex-col justify-center items-center focus:outline-none"
             aria-label="Supellex home"
           >
-            <img
-              src="/supellex-logo.png"
-              alt="Supellex"
-              className="h-20 w-auto object-contain"
-            />
+            <SupellexLogo className="h-14 w-auto" />
             <span className="text-[10px] tracking-[0.18em] text-brand-grey font-bold -mt-1 hidden md:block">
               One Home At a Time…
             </span>
@@ -140,7 +163,7 @@ export default function Header({ onNavClick, onProductClick, cartCount = 0, onCa
             <X size={28} />
           </button>
           <div className="mb-4 text-center">
-            <img src="/supellex-logo.png" alt="Supellex" className="h-20 w-auto mx-auto mb-1" />
+            <SupellexLogo className="h-16 w-auto mx-auto mb-1" />
             <span className="text-[10px] tracking-[0.18em] text-brand-grey font-bold">One Home At a Time…</span>
           </div>
           {NAV_LINKS.map((link) => (
