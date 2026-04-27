@@ -13,6 +13,7 @@ import ContactPage from './components/ContactPage';
 import ShippingPage from './components/ShippingPage';
 import ReviewsPage from './components/ReviewsPage';
 import FAQPage from './components/FAQPage';
+import TermsPage from './components/TermsPage';
 import WhySupellexPage from './components/WhySupellexPage';
 
 function Layout({ children }: { children: React.ReactNode }) {
@@ -74,7 +75,8 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/shipping" element={<ShippingPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
-        <Route path="/faq" element={<FAQPage />} />
+        <Route path="/faq" element={<FAQPage onNavClick={(href) => navigate(`/${href}`)} />} />
+        <Route path="/terms" element={<TermsPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
     </Layout>
