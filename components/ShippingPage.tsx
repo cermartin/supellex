@@ -72,28 +72,37 @@ export default function ShippingPage() {
         <div>
           <div className="inline-flex items-center gap-2 mb-6">
             <div className="w-6 h-px bg-brand-red" />
-            <span className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase">Returns Policy</span>
+            <span className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase">Returns & Refunds</span>
           </div>
           <div className="bg-white border border-brand-light p-8 space-y-5 text-brand-grey text-sm leading-relaxed">
             <div>
-              <h3 className="font-black text-brand-black text-base mb-2">30-Day Returns</h3>
-              <p>We want you to love your Supellex furniture. If for any reason you are not completely satisfied, you may return your item within 30 days of delivery for a full refund.</p>
+              <h3 className="font-black text-brand-black text-base mb-2">Right to Cancel</h3>
+              <p>In accordance with the Consumer Contracts Regulations 2013, you have the right to cancel your order within 14 days of receipt. Following cancellation, you have an additional 14 days to return the item.</p>
             </div>
             <div>
-              <h3 className="font-black text-brand-black text-base mb-2">Condition of Returns</h3>
-              <p>Items must be returned in their original, unused condition and original packaging. We are unable to accept returns for items that have been assembled or show signs of use, unless the item is faulty.</p>
+              <h3 className="font-black text-brand-black text-base mb-2">Heavy & Bulky Items</h3>
+              <p>Due to the nature of our product range, many items require specialist collection services. A collection fee applies, calculated based on your postcode, and reflects the cost of transporting large goods. Collection is arranged through our designated logistics partners.</p>
+              <ul className="mt-3 space-y-1.5 list-disc list-inside text-brand-grey/80">
+                <li>Items will be inspected at the point of collection to confirm return eligibility</li>
+                <li>Items are transported to our warehouse for final verification</li>
+                <li>Refunds are processed once inspection is complete, with the collection fee deducted</li>
+              </ul>
             </div>
             <div>
-              <h3 className="font-black text-brand-black text-base mb-2">Faulty or Damaged Items</h3>
-              <p>If your item arrives damaged or faulty, please contact us within 48 hours of delivery at <a href="mailto:info@supellex.co.uk" className="text-brand-red hover:underline">info@supellex.co.uk</a> with photos of the damage. We will arrange a replacement or full refund at no cost to you.</p>
+              <h3 className="font-black text-brand-black text-base mb-2">Return Eligibility</h3>
+              <p>To qualify for a return, items must be unused, in their original packaging, and in a resaleable condition. Failure to meet these criteria may result in the return being declined.</p>
             </div>
             <div>
-              <h3 className="font-black text-brand-black text-base mb-2">How to Return</h3>
-              <p>To initiate a return, email <a href="mailto:info@supellex.co.uk" className="text-brand-red hover:underline">info@supellex.co.uk</a> with your order number and reason for return. Our team will respond within 24 hours with return instructions.</p>
+              <h3 className="font-black text-brand-black text-base mb-2">Damaged or Faulty Items</h3>
+              <p>Report any damaged or faulty items within 48 hours of delivery, providing photographic evidence where possible. Following assessment, we will arrange either a replacement or a full refund — no additional charges apply in verified cases.</p>
             </div>
             <div>
-              <h3 className="font-black text-brand-black text-base mb-2">Refunds</h3>
-              <p>Once your return is received and inspected, your refund will be processed within 5–10 working days to your original payment method.</p>
+              <h3 className="font-black text-brand-black text-base mb-2">Non-Bulky Items</h3>
+              <p>Returns for smaller items may be processed via standard courier. Please contact us before returning any item to confirm the correct procedure and any applicable costs.</p>
+            </div>
+            <div>
+              <h3 className="font-black text-brand-black text-base mb-2">Refund Process</h3>
+              <p>Refunds are issued once the returned item has been received and inspected. All refunds are processed to the original payment method used at checkout. To initiate a return, contact us at <a href="mailto:info@supellex.co.uk" className="text-brand-red hover:underline">info@supellex.co.uk</a> with your order details.</p>
             </div>
           </div>
         </div>
