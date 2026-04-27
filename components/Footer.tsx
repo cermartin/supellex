@@ -1,16 +1,6 @@
 import { Mail } from 'lucide-react';
 import { NAV_LINKS, CONTACT_EMAIL, SHOP_EMAIL } from '../constants';
 
-function SupellexLogo({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 500 280" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
-      <path d="M55 118 C80 30, 280 -10, 420 75" stroke="#C0392B" strokeWidth="38" strokeLinecap="round" fill="none"/>
-      <path d="M80 205 C220 295, 400 260, 445 185" stroke="#C0392B" strokeWidth="38" strokeLinecap="round" fill="none"/>
-      <text x="250" y="195" textAnchor="middle" fontFamily="'Arial Black', 'Arial Bold', Arial, sans-serif" fontWeight="900" fontSize="110" fill="white" letterSpacing="-3">supellex</text>
-    </svg>
-  );
-}
-
 interface Props {
   onNavClick?: (href: string) => void;
 }
@@ -73,7 +63,7 @@ export default function Footer({ onNavClick }: Props) {
           {/* Brand + social icons */}
           <div>
             <div className="mb-4">
-              <SupellexLogo className="h-10 w-auto mb-3" />
+              <img src="/supellex-logo.png" alt="Supellex" className="h-10 w-auto object-contain mb-3" />
               <p className="text-white/60 text-[10px] tracking-[0.2em] font-bold">One Home At a Time…</p>
             </div>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs mb-6">
