@@ -19,9 +19,9 @@ export const PRODUCTS: Product[] = [
     price: '£519.99',
     image: 'https://m.media-amazon.com/images/I/71wVg64P3QL._AC_SX300_SY300_QL70_ML2_.jpg',
     description:
-      'Mirror door closet cabinet with integrated LED lighting, drawers, shelves and hanging rails. Available in 150cm, 180cm, 203cm and 250cm widths.',
+      'Our best-spec wardrobe — mirror sliding doors, built-in LED lighting, drawers, shelves and hanging rails. Four widths. Four finishes. Zero compromise.',
     details:
-      'Transform your bedroom with this modern sliding wardrobe featuring integrated LED light for enhanced visibility and a touch of luxury. Mirror sliding doors save space and bring natural light into the room, while the internal shelves, hanging rails, and drawers provide versatile storage options. Made from durable 16mm engineered wood, available in White, Black, Grey, and Oak matte finishes. Height 216cm, depth 62cm.',
+      'This is the wardrobe that does it all. Mirror sliding doors make your room feel bigger and brighter. Integrated LED lighting means you can actually see what you\'re reaching for. Inside: deep drawers, adjustable shelves, and a full-length hanging rail — everything organised, everything within reach. Built from 16mm engineered wood in a matte finish that holds up to daily life. Available in White, Black, Grey, and Oak across four widths. Height 216cm, depth 62cm.',
     dimensions: '150 / 180 / 203 / 250cm wide · H216cm · D62cm',
     totalMade: 20,
     stock: 8,
@@ -39,9 +39,9 @@ export const PRODUCTS: Product[] = [
     price: '£515.99',
     image: 'https://m.media-amazon.com/images/I/71ZJ+vMDOqL._AC_SX300_SY300_QL70_ML2_.jpg',
     description:
-      'Large storage closet with full-length mirror sliding doors and LED lighting. Available in Black, White, Grey & Oak across multiple sizes.',
+      'Full-length mirror sliding doors, integrated LED lighting, and serious storage. The wardrobe that makes your room look twice the size — in four finishes.',
     details:
-      'A sophisticated wardrobe featuring sleek sliding mirror doors that create an illusion of expanded space while providing a full-length reflection. The integrated LED lighting system adds both functionality and ambiance, illuminating your storage area beautifully. Robust construction with premium materials ensure durability and stability. Available in Black, White, Grey, and Oak finishes.',
+      'Sliding mirror doors aren\'t just a style choice — they open up the room and give you a full-length view every morning. The built-in LED lighting illuminates the interior so nothing gets lost at the back. Inside, you get hanging rails and adjustable shelving to store everything from daily wear to seasonal pieces. Solid 16mm engineered wood construction that\'s built to handle years of daily use. Available in Black, White, Grey, and Oak across four widths.',
     dimensions: '150 / 180 / 203 / 250cm wide · H216cm · D62cm',
     totalMade: 30,
     stock: 5,
@@ -60,9 +60,9 @@ export const PRODUCTS: Product[] = [
     price: '£374.99',
     image: 'https://m.media-amazon.com/images/I/71m-V1+7bzL._AC_SX300_SY300_QL70_ML2_.jpg',
     description:
-      'Stylish matte finish wardrobe with smooth-gliding doors, LED lighting, shelving and hanging rails. Available in White, Black, Grey or Oak in 3 sizes.',
+      'Clean matte finish, smooth-gliding doors, built-in LED, shelves and hanging rails. A wardrobe that fits your room — and your life — in three sizes.',
     details:
-      'Transform your bedroom storage with this sophisticated sliding door wardrobe with LED, available in three versatile sizes: 150cm, 180cm, and 203cm. The sleek, modern design features smooth-gliding doors with a premium matte finish. Inside, a thoughtfully organised space with practical shelving and hanging rails keeps your clothing and accessories perfectly arranged. The sliding door mechanism maximises your bedroom space, eliminating the need for clearance area in front of the wardrobe. Made from durable 16mm chipboard.',
+      'Premium matte finish sliding doors that glide without effort and look sharp from every angle. The built-in LED lighting keeps your interior visible and well-lit. Inside: practical shelving and a full-length hanging rail, so your wardrobe actually works the way it should. No door clearance needed — the sliding mechanism gives you back floor space. Made from 16mm engineered wood in White, Black, Grey, or Oak. Available in 150, 180, and 203cm widths.',
     dimensions: '150 / 180 / 203cm wide · H216cm · D62cm',
     totalMade: 20,
     stock: 14,
@@ -80,9 +80,9 @@ export const PRODUCTS: Product[] = [
     price: '£409.99',
     image: 'https://m.media-amazon.com/images/I/71uX8qbWO9L._AC_SX300_SY300_QL70_ML2_.jpg',
     description:
-      'Three-panel layout with two solid side doors and a central mirrored panel. Storage organiser with shelves, hanging rails and optional drawer. 4 sizes.',
+      'Three-panel design — two solid outer doors, one central mirror. Shelves, hanging rails, and a built-in drawer on the 250cm. A wardrobe that commands the room.',
     details:
-      'Elevate your bedroom with this modern sliding wardrobe, designed with a stylish three-panel layout — two solid side doors and a central mirrored panel. This unique structure enhances the aesthetic of your space and reflects light to make your room feel brighter and more spacious. Available in 150cm, 180cm, 203cm, and 250cm widths. The 250cm model also includes a built-in drawer for added functionality. Made from durable 16mm engineered wood, finished in Grey, White, Oak, or Black.',
+      'The three-panel layout sets this wardrobe apart. Two solid outer panels frame a central mirrored door that reflects light and opens up the space — without going full mirror wall. Inside: adjustable shelves and a hanging rail, with the 250cm model adding a built-in drawer for everyday essentials. Available in four widths and finished in Grey, White, Oak, or Black matte. Built from 16mm engineered wood — sturdy, smooth, and made to last.',
     dimensions: '150 / 180 / 203 / 250cm wide · H216cm · D62cm',
     totalMade: 20,
     stock: 10,
@@ -100,9 +100,9 @@ export const PRODUCTS: Product[] = [
     price: '£367.99',
     image: 'https://m.media-amazon.com/images/I/71a-Oi8f0DL._AC_SX300_SY300_QL70_ML2_.jpg',
     description:
-      'Modern bedroom storage cabinet combining a full-length mirror door with a solid panel door. Shelves and hanging rail. 5 sizes: 120–250cm.',
+      'Half mirror, half solid — a clean combination that fits any bedroom. Shelves and hanging rail inside. Five widths from 120cm to 250cm.',
     details:
-      'Add modern elegance and practical storage to your bedroom with this stylish sliding wardrobe. Features a combination of mirror and solid sliding doors for a sleek, space-enhancing appearance. Available in 120cm to 250cm widths — the 250cm model features three doors with a central mirror flanked by two solid outer panels. Inside: adjustable shelves and a hanging rail. Made from durable 16mm engineered wood in White, Grey, Oak, or Black matte finishes. Height 216cm, depth 62cm.',
+      'Not every room needs a full mirror wardrobe — this one strikes the right balance. One sliding mirror door, one solid panel, together creating a look that\'s modern without being loud. The 250cm model steps it up with three doors: a central mirror flanked by two solid outer panels. Inside: adjustable shelves and a full-length hanging rail. Available from 120cm to 250cm wide, in White, Grey, Oak, or Black matte. Height 216cm, depth 62cm.',
     dimensions: '120 / 150 / 180 / 203 / 250cm wide · H216cm · D62cm',
     totalMade: 20,
     stock: 8,
@@ -119,10 +119,11 @@ export const PRODUCTS: Product[] = [
     category: 'Wardrobes',
     price: '£377.99',
     image: 'https://m.media-amazon.com/images/I/812exi6kRWL._AC_SX300_SY300_QL70_ML2_.jpg',
+
     description:
-      'Mirror and solid door wardrobe with built-in LED lighting. Shelves and hanging rail. Available in 5 widths and 4 finishes.',
+      'Mirror and solid door wardrobe with built-in LED lighting. Five widths, four finishes — the same clean combination, now with light where you need it.',
     details:
-      'Upgrade your bedroom with this stylish sliding wardrobe combining modern aesthetics with practical storage. Features a built-in LED light that illuminates your items inside while adding a contemporary feel. Smaller wardrobes (120–203cm) include two sliding panels — one mirrored and one solid finish — while the 250cm model includes three doors with a centre mirror flanked by two solid panels. Inside: adjustable shelves and a hanging rail. Made from durable 16mm engineered wood in White, Grey, Oak, or Black.',
+      'Everything you get with the mirror-solid combination, plus built-in LED lighting that makes your wardrobe interior feel premium every single day. Smaller sizes (120–203cm) feature one mirrored and one solid sliding panel. The 250cm model goes three-door: a central mirror with two solid outer panels. Inside: adjustable shelves and a hanging rail. Made from 16mm engineered wood in White, Grey, Oak, or Black matte finishes.',
     dimensions: '120 / 150 / 180 / 203 / 250cm wide · H216cm · D62cm',
     totalMade: 20,
     stock: 6,
@@ -140,9 +141,9 @@ export const PRODUCTS: Product[] = [
     price: '£299.99',
     image: 'https://m.media-amazon.com/images/I/61WHxZXrvnL._AC_SY300_SX300_QL70_ML2_.jpg',
     description:
-      'Modern makeup desk with Hollywood-style LED lighted mirror and spacious drawers. Available in Black, White and Pink.',
+      'Hollywood LED mirror, deep drawers, and a finish that makes a statement. Your morning routine deserves a proper setup — in Black, White, or Pink.',
     details:
-      'Enhance your beauty space with this modern vanity dressing table. Designed with a Hollywood-style illuminated mirror, it provides flawless lighting for makeup, skincare, and hairstyling. Multiple spacious drawers keep your cosmetics, jewellery, and essentials neatly organised and within reach. Available in Black, White, and Pink — this vanity desk combines elegance and practicality, making it the perfect addition to any bedroom, apartment, or dressing room.',
+      'This isn\'t just a table — it\'s a proper vanity station. The Hollywood-style LED mirror delivers even, bright lighting that makes getting ready easier and more enjoyable. Deep drawers keep your makeup, skincare, and jewellery organised and within reach. Available in Black, White, and Pink — designed to be the focal point of your bedroom, not just a functional afterthought. Looks good. Works harder.',
     dimensions: 'W80cm × D40cm × H150cm',
     totalMade: 15,
     stock: 5,
@@ -159,9 +160,9 @@ export const PRODUCTS: Product[] = [
     price: '£349.99',
     image: 'https://m.media-amazon.com/images/I/71IwESz54CL._AC_SX300_SY300_QL70_ML2_.jpg',
     description:
-      'Luxury makeup desk with LED-illuminated mirror, 8 smooth-sliding drawers, multiple shelves and sleek brass-finished handles. 4 colour options.',
+      'Eight drawers, LED-illuminated mirror, brass handles, open shelving. This is what a luxury vanity table should look like — without the luxury price tag.',
     details:
-      'Transform your space into a luxurious beauty sanctuary with this stunning Supellex vanity table. Featuring a sophisticated design with LED-illuminated mirror and generous storage solutions, this vanity table combines style with functionality. Eight smooth-sliding drawers provide ample space for organising cosmetics and accessories, while multiple shelving units offer additional display storage. Available in Black, White, Grey, and Pink. The premium LED lighting system ensures optimal illumination for makeup application. Sleek brass-finished handles add a touch of sophistication.',
+      'Eight smooth-sliding drawers. An LED-illuminated mirror that lights your face evenly. Open shelving for display. Brass-finish handles that feel premium every time you open them. This vanity table is built for people who take their space seriously — and want their bedroom to reflect that. Available in Black, White, Grey, and Pink. Wide enough to have everything out, smart enough to keep it all organised.',
     dimensions: 'W110cm × D70cm × H140cm',
     totalMade: 15,
     stock: 4,
@@ -178,9 +179,9 @@ export const PRODUCTS: Product[] = [
     price: '£319.99',
     image: 'https://m.media-amazon.com/images/I/610hyhsbBLL._AC_SY300_SX300_QL70_ML2_.jpg',
     description:
-      'Wooden frame bunk bed with safety rails and ladder. Double or triple sleeper. With or without mattress. Available in White and Grey.',
+      'Solid wooden bunk bed with full safety rails and ladder. Double or triple sleeper. Available with or without mattress in White and Grey.',
     details:
-      'Transform your children\'s bedroom with this stylish and practical bunk bed. Crafted with a robust wooden frame in elegant White or Grey finish, this bed combines functionality with modern aesthetics. The design features comprehensive safety measures including sturdy guard rails and a well-built ladder for easy access to the top bunk. The clean lines and neutral colour scheme complement any room décor. The bed\'s thoughtful construction maximises floor space, making it ideal for shared bedrooms. Built-in safety rails on the top bunk meet all UK safety requirements. Maximum weight recommendation: 150kg.',
+      'Built for shared rooms and growing families. This bunk bed is solid, safe, and designed to last through the years — not just the first few months. Full-height safety rails on the top bunk, a sturdy ladder, and a clean wooden frame that fits any kids\' bedroom without looking out of place. Available as a double or triple sleeper, with or without mattress. White and Grey finishes. Meets all UK safety requirements. Max weight: 150kg.',
     dimensions: 'L197.6cm × W145.6cm × H149.6cm',
     totalMade: 10,
     stock: 3,
