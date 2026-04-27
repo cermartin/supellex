@@ -10,6 +10,14 @@ export default function Hero({ onShopClick }: Props) {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-brand-offwhite to-brand-bg pointer-events-none" />
 
+      {/* Brand symbol watermark */}
+      <img
+        src="/supellex-symbol.png"
+        alt=""
+        aria-hidden="true"
+        className="absolute left-[-60px] bottom-[-40px] w-[340px] opacity-[0.04] select-none pointer-events-none"
+      />
+
       {/* Decorative red line */}
       <div className="relative z-10 w-10 h-0.5 bg-brand-red mx-auto mb-4" />
 

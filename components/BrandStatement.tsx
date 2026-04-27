@@ -20,9 +20,17 @@ const PILLARS = [
 
 export default function BrandStatement() {
   return (
-    <section className="bg-brand-black">
+    <section className="relative bg-brand-black overflow-hidden">
       {/* Red accent top bar */}
       <div className="h-1 bg-brand-red" />
+
+      {/* Brand symbol watermark */}
+      <img
+        src="/supellex-symbol.png"
+        alt=""
+        aria-hidden="true"
+        className="absolute right-[-80px] top-1/2 -translate-y-1/2 w-[380px] opacity-[0.04] select-none pointer-events-none"
+      />
 
       {/* Intro text */}
       <div className="py-20 px-6">
