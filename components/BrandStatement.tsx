@@ -3,18 +3,18 @@ import { Sofa, Sparkles, Truck } from 'lucide-react';
 const PILLARS = [
   {
     icon: Sofa,
-    title: 'Thoughtfully Designed',
-    body: 'Every piece is crafted to fit seamlessly into your bedroom — practical storage that never compromises on style.',
+    title: 'Built to Last',
+    body: 'Supellex furniture is engineered for real homes — premium materials, solid construction, designed to look good for years, not months.',
   },
   {
     icon: Sparkles,
-    title: 'Integrated LED Lighting',
-    body: 'Built-in LED strips add warmth and clarity to your wardrobe interior — a small detail that makes a big difference.',
+    title: 'LED Lighting Included',
+    body: 'Every wardrobe comes with integrated LED lighting as standard. Wake up to a bedroom that actually works for you.',
   },
   {
     icon: Truck,
-    title: 'Nationwide Delivery',
-    body: 'We ship across the UK. Your new furniture arrives carefully packaged and ready to assemble.',
+    title: 'Free UK Delivery',
+    body: 'We deliver to every postcode in the UK at no extra cost. Your order arrives packaged with care — ready to build, ready to enjoy.',
   },
 ];
 
@@ -29,11 +29,10 @@ export default function BrandStatement() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="w-10 h-0.5 bg-brand-red mx-auto mb-6" />
           <h2 className="font-serif text-4xl md:text-5xl text-white leading-snug mb-5">
-            Furniture that feels like home
+            Your home deserves better
           </h2>
           <p className="text-white/50 text-base leading-relaxed">
-            Supellex was built on one idea: that great bedroom furniture should be accessible, beautiful,
-            and built to last. Browse our collection and find the perfect fit for your space.
+            Supellex exists because great bedroom furniture shouldn't cost a fortune or feel like a compromise. We built the brand to change that — one home at a time.
           </p>
         </div>
 

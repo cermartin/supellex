@@ -89,7 +89,7 @@ export default function ProductGallery({ onProductClick, onBrowseAll }: Props) {
             </span>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl text-brand-black leading-tight max-w-lg">
-            Handpicked for your home
+            The pieces people keep coming back for
           </h2>
         </div>
 
@@ -108,7 +108,7 @@ export default function ProductGallery({ onProductClick, onBrowseAll }: Props) {
         {!showAll && (
           <div className="mt-16 text-center">
             <p className="text-brand-grey text-sm mb-5">
-              We carry 50+ products across wardrobes, dressing tables and beds.
+              50+ products across wardrobes, dressing tables, and beds — something for every room.
             </p>
             <button
               onClick={() => onBrowseAll ? onBrowseAll() : setShowAll(true)}

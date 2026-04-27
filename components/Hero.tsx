@@ -48,8 +48,7 @@ export default function Hero({ onShopClick }: Props) {
 
       {/* Sub-copy */}
       <p className="relative z-10 text-brand-grey text-sm md:text-base leading-relaxed max-w-md mb-7">
-        Sliding wardrobes with integrated LED lighting, elegant vanity tables, and smart
-        storage — designed to make every morning feel effortless.
+        Supellex brings premium bedroom furniture — sliding wardrobes, vanity tables, bunk beds — directly to your home. No showroom markups. No compromise on quality.
       </p>
 
       {/* CTAs */}
