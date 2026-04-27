@@ -10,7 +10,19 @@ export default function Hero({ onShopClick }: Props) {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-brand-offwhite to-brand-bg pointer-events-none" />
 
-{/* Decorative red line */}
+      {/* Swoosh watermark — inline SVG, no background */}
+      <svg
+        viewBox="0 0 500 340"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute inset-0 w-full h-full opacity-[0.03] select-none pointer-events-none"
+        aria-hidden="true"
+      >
+        <path d="M30 160 C100 10, 380 -20, 470 130" stroke="#C0392B" strokeWidth="52" strokeLinecap="round"/>
+        <path d="M30 210 C120 360, 400 370, 470 210" stroke="#C0392B" strokeWidth="52" strokeLinecap="round"/>
+      </svg>
+
+      {/* Decorative red line */}
       <div className="relative z-10 w-10 h-0.5 bg-brand-red mx-auto mb-4" />
 
       {/* Eyebrow — NOT uppercase, as written */}
