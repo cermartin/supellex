@@ -41,14 +41,7 @@ const PILLARS = [
 
 export default function WhySupellexPage() {
   return (
-    <main className="pt-28 min-h-screen bg-brand-offwhite relative overflow-x-hidden">
-      {/* Brand symbol watermark */}
-      <img
-        src="/supellex-symbol.png"
-        alt=""
-        aria-hidden="true"
-        className="absolute right-[-60px] top-16 w-[300px] opacity-[0.05] select-none pointer-events-none"
-      />
+    <main className="pt-28 min-h-screen bg-brand-offwhite">
       {/* Intro */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="mb-16 max-w-2xl">
