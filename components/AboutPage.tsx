@@ -1,34 +1,31 @@
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-brand-offwhite pt-24">
-      {/* Hero banner */}
-      <div className="bg-brand-black py-20 px-6 relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-brand-red" />
-        <div className="max-w-4xl mx-auto">
+    <main className="pt-28 min-h-screen bg-brand-offwhite">
+      {/* Intro */}
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="mb-16 max-w-2xl">
           <div className="inline-flex items-center gap-2 mb-4">
             <div className="w-8 h-px bg-brand-red" />
             <span className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase">About Us</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-black text-white leading-tight mb-6">
+          <h1 className="font-serif text-4xl md:text-6xl text-brand-black leading-tight mb-6">
             Built for the<br />
-            <span className="text-brand-red">Modern Home.</span>
+            <span className="text-brand-red">modern home.</span>
           </h1>
-          <p className="text-white/50 text-lg max-w-xl leading-relaxed">
-            Supellex was founded with one goal — to bring premium bedroom furniture to British homes at an honest price.
+          <p className="text-brand-grey text-lg leading-relaxed">
+            Supellex was founded with one goal — to bring premium bedroom furniture to British homes at an honest price. We believe great design shouldn't come with a premium postcode.
           </p>
         </div>
-      </div>
 
-      {/* Story */}
-      <div className="max-w-4xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
+        {/* Story grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-24">
           <div>
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="w-6 h-px bg-brand-red" />
               <span className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase">Our Story</span>
             </div>
-            <h2 className="text-3xl font-black text-brand-black mb-5 leading-tight">
-              Where Quality Meets Design
+            <h2 className="font-serif text-3xl text-brand-black mb-5 leading-tight">
+              Where quality meets design
             </h2>
             <p className="text-brand-grey leading-relaxed mb-4">
               We believe your bedroom should feel like a sanctuary. Every Supellex piece is carefully designed to combine smart storage with clean, contemporary aesthetics — furniture that works as hard as you do.
@@ -37,34 +34,46 @@ export default function AboutPage() {
               From sliding wardrobes with integrated LED lighting to Hollywood vanity tables and space-saving bunk beds, every product in our range is built to last and designed to impress.
             </p>
           </div>
-          <div className="bg-brand-charcoal aspect-square flex items-center justify-center">
-            <div className="text-center p-8">
-              <svg width="80" height="80" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto mb-4">
-                <circle cx="22" cy="22" r="22" fill="white" />
-                <path d="M8 16 Q22 10 36 16" stroke="#D62B2B" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-                <path d="M8 28 Q22 34 36 28" stroke="#D62B2B" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-              </svg>
-              <span className="text-white font-black text-2xl tracking-wider uppercase">supellex</span>
-              <p className="text-white/30 text-sm mt-2">Premium Bedroom Furniture</p>
-            </div>
+
+          {/* Brand statement block */}
+          <div className="bg-brand-black text-white p-10">
+            <div className="w-10 h-0.5 bg-brand-red mb-6" />
+            <blockquote className="font-serif text-2xl md:text-3xl leading-snug text-white/90 mb-6">
+              "Our goal is simple — to be in every home, one family at a time."
+            </blockquote>
+            <p className="text-white/40 text-xs font-bold tracking-widest uppercase">
+              Supellex — One Home At a Time…
+            </p>
           </div>
         </div>
 
         {/* Values */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[
-            { num: '01', title: 'Quality First', body: 'Every product is built to exacting standards using premium materials that stand the test of time.' },
-            { num: '02', title: 'Design Led', body: 'Clean lines, considered finishes, and thoughtful details — furniture that elevates any bedroom.' },
-            { num: '03', title: 'Customer Focused', body: 'From first click to delivery and beyond, we are committed to an exceptional experience.' },
+            {
+              num: '01',
+              title: 'Quality First',
+              body: 'Every product is built to exacting standards using premium materials that stand the test of time — no corners cut.',
+            },
+            {
+              num: '02',
+              title: 'Design Led',
+              body: 'Clean lines, considered finishes, and thoughtful details — furniture that elevates any bedroom without overwhelming it.',
+            },
+            {
+              num: '03',
+              title: 'Customer Focused',
+              body: 'From first click to delivery and beyond, we are committed to making every part of your experience effortless.',
+            },
           ].map(({ num, title, body }) => (
-            <div key={num} className="p-8 bg-white border border-brand-light">
-              <div className="text-5xl font-black text-brand-red/10 leading-none mb-4 select-none">{num}</div>
-              <h3 className="font-black text-brand-black text-lg mb-3">{title}</h3>
+            <div key={num} className="group p-8 bg-white border border-brand-light hover:border-brand-red/40 transition-colors">
+              <div className="text-5xl font-black text-brand-black/5 group-hover:text-brand-red/10 transition-colors mb-4 leading-none select-none">{num}</div>
+              <h3 className="font-black text-brand-black text-base mb-3 leading-snug">{title}</h3>
               <p className="text-brand-grey text-sm leading-relaxed">{body}</p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </main>
   );
 }

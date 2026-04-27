@@ -5,37 +5,37 @@ const PILLARS = [
     num: '01',
     icon: Zap,
     title: 'Integrated LED Lighting',
-    body: 'Built-in LED strips illuminate your wardrobe interior for effortless, stylish organisation — day or night.',
+    body: 'Every wardrobe comes with built-in LED strips — so your mornings are easier, your space looks premium, and nothing gets lost in the dark.',
   },
   {
     num: '02',
     icon: Layers,
     title: 'Premium Materials',
-    body: 'Engineered wood panels with high-quality laminate finishes — durable, beautiful, and easy to maintain.',
+    body: 'We use engineered wood with high-quality laminate finishes. Built to handle daily life without scratching, warping, or fading.',
   },
   {
     num: '03',
     icon: Ruler,
     title: 'Multiple Size Options',
-    body: 'Every product comes in 3–6 size configurations so you always find the perfect fit for your space.',
+    body: 'Every product comes in multiple configurations — so whether your room is compact or spacious, there\'s a Supellex that fits perfectly.',
   },
   {
     num: '04',
     icon: ShieldCheck,
     title: 'Buyer Protection',
-    body: 'Shop with confidence. Full buyer protection, hassle-free returns, and dedicated customer support.',
+    body: 'Every order is covered. If something isn\'t right, we make it right — no hoops, no hassle, no waiting weeks for a reply.',
   },
   {
     num: '05',
     icon: Truck,
     title: 'Free UK Delivery',
-    body: 'Every order ships free to any address across the United Kingdom — no minimum spend, no hidden fees.',
+    body: 'We deliver to every corner of the UK, completely free. No minimum order, no hidden charges — just your furniture, at your door.',
   },
   {
     num: '06',
     icon: HeadphonesIcon,
     title: 'UK-Based Support',
-    body: 'Our team is based right here in the UK. Reach us directly — we\'re always on hand to help.',
+    body: 'Our team is based right here in the UK. Real people, real answers — reach us by email or WhatsApp and we\'ll get back to you fast.',
   },
 ];
 
