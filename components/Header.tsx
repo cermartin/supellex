@@ -62,7 +62,7 @@ export default function Header({ onNavClick, onProductClick, cartCount = 0, onCa
             className="flex flex-col justify-center items-center focus:outline-none"
             aria-label="Supellex home"
           >
-            <img src="/supellex-logo.png" alt="Supellex" className="h-14 w-auto object-contain" />
+            <img src="/supellex-logo.png" alt="Supellex" className="h-20 w-auto object-contain" />
             <span className="text-[10px] tracking-[0.18em] text-brand-grey font-bold -mt-1 hidden md:block">
               One Home At a Time…
             </span>
