@@ -24,9 +24,9 @@ export default function ShippingPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { icon: Truck,     title: 'Nationwide Delivery', body: 'Across the UK' },
-            { icon: Clock,     title: '2–5 Days',       body: 'Standard delivery' },
-            { icon: RotateCcw, title: '30-Day Returns', body: 'Hassle-free policy' },
-            { icon: Shield,    title: 'Fully Insured',  body: 'Every shipment covered' },
+            { icon: Clock,     title: '3–6 Working Days', body: 'Standard delivery' },
+            { icon: RotateCcw, title: '30-Day Returns',   body: 'Hassle-free policy' },
+            { icon: Shield,    title: 'Fully Insured',    body: 'Every shipment covered' },
           ].map(({ icon: Icon, title, body }) => (
             <div key={title} className="bg-white border border-brand-light p-6 flex flex-col items-center text-center gap-3">
               <div className="w-12 h-12 bg-brand-red/10 flex items-center justify-center">
@@ -42,24 +42,28 @@ export default function ShippingPage() {
         <div>
           <div className="inline-flex items-center gap-2 mb-6">
             <div className="w-6 h-px bg-brand-red" />
-            <span className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase">Shipping Policy</span>
+            <span className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase">Delivery Information</span>
           </div>
           <div className="bg-white border border-brand-light p-8 space-y-5 text-brand-grey text-sm leading-relaxed">
             <div>
-              <h3 className="font-black text-brand-black text-base mb-2">Delivery Areas</h3>
-              <p>We currently deliver to all mainland UK addresses. Delivery to Scottish Highlands, Northern Ireland, and other remote areas may take additional time — please contact us for details.</p>
+              <h3 className="font-black text-brand-black text-base mb-2">Delivery Timeframes</h3>
+              <p>Standard delivery is typically completed within 3–6 working days from order confirmation. Delivery times may vary depending on product type, order volume, and delivery location. For larger items, you may be contacted directly to arrange a suitable delivery window.</p>
             </div>
             <div>
-              <h3 className="font-black text-brand-black text-base mb-2">Delivery Times</h3>
-              <p>Standard delivery takes 2–5 working days from the date your order is confirmed. You will receive a tracking notification once your order has been dispatched.</p>
+              <h3 className="font-black text-brand-black text-base mb-2">Delivery Coverage</h3>
+              <p>We deliver to most mainland UK locations. Deliveries to remote or extended areas — including parts of Scotland, Northern Ireland, and offshore locations — may be subject to additional charges or extended lead times. Please contact us before placing an order if you're unsure about your location.</p>
             </div>
             <div>
-              <h3 className="font-black text-brand-black text-base mb-2">Delivery Cost</h3>
-              <p>We offer nationwide delivery across the UK. Delivery charges may apply to certain remote areas — contact us for details before ordering.</p>
+              <h3 className="font-black text-brand-black text-base mb-2">Delivery Charges</h3>
+              <p>Delivery charges are calculated based on your delivery postcode and the size and weight of your order. All applicable costs are clearly displayed at checkout prior to payment.</p>
             </div>
             <div>
-              <h3 className="font-black text-brand-black text-base mb-2">Large Items</h3>
-              <p>Wardrobes and larger furniture items are delivered via a specialist courier. You will be contacted to arrange a suitable delivery slot. An unpack and assembly service is available on selected items — please check the individual product listing for details.</p>
+              <h3 className="font-black text-brand-black text-base mb-2">Handling & Logistics</h3>
+              <p>Due to the size and weight of our products, deliveries are carried out by specialist furniture couriers to ensure safe handling and transportation. All items are dispatched with appropriate care to minimise the risk of damage in transit.</p>
+            </div>
+            <div>
+              <h3 className="font-black text-brand-black text-base mb-2">Failed Delivery Attempts</h3>
+              <p>If a delivery attempt is unsuccessful due to customer unavailability, re-delivery may incur an additional charge. Please ensure access and availability are suitable at the agreed delivery time.</p>
             </div>
           </div>
         </div>
