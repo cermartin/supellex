@@ -106,7 +106,7 @@ export default function ShippingPage() {
               Returns for smaller items may be processed via standard courier. Please contact us before returning any item to confirm the correct procedure and any applicable costs.
             </PolicySection>
             <PolicySection label="Refund Process" heading="How and when are refunds issued?">
-              Refunds are issued once the returned item has been received and inspected. All refunds are processed to the original payment method used at checkout. To initiate a return, contact us at <a href="mailto:info@supellex.co.uk" className="text-brand-red hover:underline">info@supellex.co.uk</a> with your order details.
+              Refunds are issued once the returned item has been received and inspected. All refunds are processed to the original payment method used at checkout.
             </PolicySection>
           </div>
         </div>

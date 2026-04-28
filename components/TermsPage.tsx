@@ -65,7 +65,7 @@ export default function TermsPage() {
 
               <div>
                 <h3 className="font-black text-brand-black text-base mb-2">Customer Support</h3>
-                <p>For any delivery-related enquiries, customers are encouraged to contact our support team prior to or following their purchase at <a href="mailto:support@supellex.co.uk" className="text-brand-red hover:underline">support@supellex.co.uk</a>.</p>
+                <p>For any delivery-related enquiries, customers are encouraged to contact our support team prior to or following their purchase.</p>
               </div>
             </div>
           </section>
@@ -145,7 +145,7 @@ export default function TermsPage() {
 
               <div>
                 <h3 className="font-black text-brand-black text-base mb-2">Customer Support</h3>
-                <p>For all returns enquiries, customers should contact our support team with their order details for further assistance at <a href="mailto:support@supellex.co.uk" className="text-brand-red hover:underline">support@supellex.co.uk</a>.</p>
+                <p>For all returns enquiries, customers should contact our support team with their order details for further assistance.</p>
               </div>
             </div>
           </section>

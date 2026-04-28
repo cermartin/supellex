@@ -33,7 +33,7 @@ const FAQS = [
     items: [
       {
         q: 'Can I return an item?',
-        a: 'Yes, we offer a 30-day return period from the date of delivery. To be eligible for a return, items must be unused, in their original condition, and returned in original packaging. Customers must contact us to initiate the return process, and further instructions will be provided accordingly.',
+        a: 'Yes, we offer a 30-day return period from the date of delivery. To be eligible for a return, items must be: unused, in their original condition (in a condition to be resold), and returned in original packaging. Customers must contact us to initiate the return process, and further instructions will be provided accordingly.',
       },
       {
         q: 'What if my item arrives damaged?',
@@ -63,7 +63,7 @@ const FAQS = [
     items: [
       {
         q: 'How do I contact customer support?',
-        a: 'Our customer support team is available to assist with all enquiries before and after purchase. You can contact us via email at support@supellex.co.uk or info@supellex.co.uk, or message us directly on WhatsApp at +44 7391 858618.',
+        a: 'Our customer support team is available to assist with all enquiries before and after purchase.\n\nCustomer Support: support@supellex.co.uk\nGeneral Enquiries: info@supellex.co.uk\nWhatsApp: +44 7391 858618',
       },
     ],
   },
@@ -84,7 +84,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         />
       </button>
       {open && (
-        <p className="pb-5 text-brand-grey text-sm leading-relaxed">{a}</p>
+        <p className="pb-5 text-brand-grey text-sm leading-relaxed whitespace-pre-line">{a}</p>
       )}
     </div>
   );
