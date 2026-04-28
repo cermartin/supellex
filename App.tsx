@@ -49,6 +49,11 @@ function ProductsRoute() {
   return <ProductsPage onProductClick={(id) => navigate(`/product/${id}`)} />;
 }
 
+function FAQRoute() {
+  const navigate = useNavigate();
+  return <FAQPage onNavClick={(href) => navigate(`/${href}`)} />;
+}
+
 function HomePage() {
   const navigate = useNavigate();
   return (
@@ -75,7 +80,7 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/shipping" element={<ShippingPage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
-        <Route path="/faq" element={<FAQPage onNavClick={(href) => navigate(`/${href}`)} />} />
+        <Route path="/faq" element={<FAQRoute />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
