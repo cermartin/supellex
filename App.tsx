@@ -1,10 +1,8 @@
-import { Routes, Route, useNavigate, useParams } from 'react-router-dom';
-import { PRODUCTS } from './constants';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProductGallery from './components/ProductGallery';
-import ProductsPage from './components/ProductsPage';
-import ProductDetail from './components/ProductDetail';
+import EcwidStorePage from './components/EcwidStorePage';
 import BrandStatement from './components/BrandStatement';
 import Footer from './components/Footer';
 import BuildBadge from './components/BuildBadge';
@@ -31,23 +29,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-function ProductDetailRoute() {
-  const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
-  const product = PRODUCTS.find((p) => p.id === id);
-  if (!product) return <div className="pt-32 text-center text-brand-grey">Product not found.</div>;
-  return (
-    <ProductDetail
-      product={product}
-      onBack={() => navigate('/products')}
-    />
-  );
-}
 
-function ProductsRoute() {
-  const navigate = useNavigate();
-  return <ProductsPage onProductClick={(id) => navigate(`/product/${id}`)} />;
-}
 
 function FAQRoute() {
   const navigate = useNavigate();
@@ -73,8 +55,7 @@ export default function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/products" element={<ProductsRoute />} />
-        <Route path="/product/:id" element={<ProductDetailRoute />} />
+        <Route path="/products" element={<EcwidStorePage />} />
         <Route path="/why" element={<WhySupellexPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
