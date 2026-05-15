@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supellex Brand Guidelines</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:       #D62B2B;
+      --red-dark:  #A81F1F;
+      --black:     #0D0D0D;
+      --charcoal:  #1A1A1A;
+      --offwhite:  #F5F5F3;
+      --bg:        #EFEFED;
+      --grey:      #8A8A8A;
+      --light:     #E0E0DC;
+      --white:     #FFFFFF;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--offwhite);
+      color: var(--black);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    .hero {
+      background: var(--black);
+      padding: 72px 48px;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--red);
+    }
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .hero-label .line { width: 32px; height: 1px; background: var(--red); }
+    .hero-label span {
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.05;
+    }
+    .hero h1 em { color: var(--red); font-style: normal; }
+    .hero p {
+      color: rgba(255,255,255,0.45);
+      margin-top: 16px;
+      font-size: 14px;
+      max-width: 520px;
+    }
+
+    /* ── Layout ── */
+    .container { max-width: 960px; margin: 0 auto; padding: 64px 32px; }
+    .section { margin-bottom: 72px; }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .section-label .line { width: 20px; height: 1px; background: var(--red); }
+    .section-label span {
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+    h2 em { color: var(--red); font-style: normal; }
+
+    h3 {
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+
+    p { color: var(--grey); font-size: 14px; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    .divider { border: none; border-top: 1px solid var(--light); margin: 48px 0; }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--white);
+      border: 1px solid var(--light);
+      padding: 32px;
+      margin-bottom: 16px;
+    }
+
+    /* ── Colour swatches ── */
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+    }
+    .swatch { border: 1px solid var(--light); overflow: hidden; }
+    .swatch-block { height: 72px; }
+    .swatch-info { padding: 10px 12px; background: var(--white); }
+    .swatch-name { font-weight: 700; font-size: 13px; color: var(--black); }
+    .swatch-hex  { font-size: 12px; color: var(--grey); font-family: monospace; }
+    .swatch-use  { font-size: 11px; color: var(--grey); margin-top: 4px; line-height: 1.4; }
+
+    /* ── Typography specimens ── */
+    .type-specimen { padding: 24px; background: var(--white); border: 1px solid var(--light); margin-bottom: 12px; }
+    .specimen-label { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; }
+
+    /* ── Buttons ── */
+    .btn-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-top: 16px; }
+    .btn-primary {
+      background: var(--red);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border: none;
+      cursor: default;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--black);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      border: 1px solid var(--black);
+      cursor: default;
+    }
+
+    /* ── UI pattern demos ── */
+    .pattern-banner {
+      background: var(--black);
+      padding: 40px 32px;
+      position: relative;
+      margin-bottom: 12px;
+    }
+    .pattern-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--red);
+    }
+    .pattern-banner h3 {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--white);
+      text-transform: none;
+      letter-spacing: 0;
+      margin: 8px 0 0;
+    }
+    .pattern-banner h3 em { color: var(--red); font-style: normal; }
+
+    /* ── Table ── */
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey);
+      border-bottom: 1px solid var(--light);
+      padding: 8px 12px;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--light);
+      color: var(--grey);
+    }
+    td:first-child { font-weight: 700; color: var(--black); }
+    td code {
+      font-family: monospace;
+      font-size: 13px;
+      background: var(--bg);
+      padding: 2px 6px;
+      color: var(--red);
+    }
+    tr:last-child td { border-bottom: none; }
+
+    /* ── Voice ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .voice-do   { border-left: 3px solid var(--red); padding: 20px 24px; background: var(--white); border-top: 1px solid var(--light); border-right: 1px solid var(--light); border-bottom: 1px solid var(--light); }
+    .voice-dont { border-left: 3px solid var(--light); padding: 20px 24px; background: var(--white); border-top: 1px solid var(--light); border-right: 1px solid var(--light); border-bottom: 1px solid var(--light); }
+    .voice-do h3   { color: var(--red); }
+    .voice-dont h3 { color: var(--grey); }
+    .voice-do li, .voice-dont li { font-size: 14px; color: var(--grey); margin-bottom: 6px; list-style: none; padding-left: 0; }
+    .voice-do li::before   { content: '✓  '; color: var(--red); font-weight: 700; }
+    .voice-dont li::before { content: '✗  '; color: var(--light); font-weight: 700; }
+
+    /* ── Contact ── */
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+    .contact-card { background: var(--white); border: 1px solid var(--light); padding: 20px 24px; }
+    .contact-card .label { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--grey); margin-bottom: 6px; }
+    .contact-card .value { font-weight: 700; color: var(--black); font-size: 14px; }
+
+    /* ── Footer ── */
+    .footer {
+      background: var(--black);
+      padding: 40px 48px;
+      text-align: center;
+    }
+    .footer p { color: rgba(255,255,255,0.3); font-size: 13px; }
+    .footer strong { color: var(--red); }
+
+    @media (max-width: 600px) {
+      .two-col { grid-template-columns: 1fr; }
+      .hero { padding: 48px 24px; }
+      .container { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="hero">
+  <div class="hero-label">
+    <div class="line"></div>
+    <span>Brand Guidelines</span>
+  </div>
+  <h1>Supellex<br><em>Brand Standards</em></h1>
+  <p>The visual and verbal identity of Supellex — to be followed across all touchpoints including the website, social media, packaging, and communications.</p>
+</div>
+
+<div class="container">
+
+  <!-- 1. Identity -->
+  <div class="section">
+    <div class="section-label"><div class="line"></div><span>01 — Identity</span></div>
+    <h2>Brand <em>Identity</em></h2>
+    <hr class="divider" style="margin-top:24px;margin-bottom:24px;">
+    <div class="card">
+      <table>
+        <tr><th>Attribute</th><th>Value</th></tr>
+        <tr><td>Name</td><td>Supellex</td></tr>
+        <tr><td>Tagline</td><td>One Home At a Time</td></tr>
+        <tr><td>Positioning</td><td>Premium bedroom furniture sold direct — no showroom markups, no compromise on quality</td></tr>
+        <tr><td>Language</td><td>British English throughout (organisation, colour, analyse, enquire)</td></tr>
+        <tr><td>Voice</td><td>Premium but direct. Confident, not arrogant. No fluff.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 2. Colours -->
+  <div class="section">
+    <div class="section-label"><div class="line"></div><span>02 — Colour</span></div>
+    <h2>Colour <em>Palette</em></h2>
+    <p style="margin:16px 0 24px;">Red and Black are the primary brand colours. Offwhite is the default background. Never introduce colours outside this palette.</p>
+
+    <div class="swatches">
+      <div class="swatch">
+        <div class="swatch-block" style="background:#D62B2B;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Brand Red</div>
+          <div class="swatch-hex">#D62B2B</div>
+          <div class="swatch-use">CTAs, accents, logo swoosh, heading highlights</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#A81F1F;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Red Dark</div>
+          <div class="swatch-hex">#A81F1F</div>
+          <div class="swatch-use">Hover state on red buttons</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#0D0D0D;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Brand Black</div>
+          <div class="swatch-hex">#0D0D0D</div>
+          <div class="swatch-use">Dark backgrounds, header, banners</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#1A1A1A;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Charcoal</div>
+          <div class="swatch-hex">#1A1A1A</div>
+          <div class="swatch-use">Section dark backgrounds</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#F5F5F3; border-bottom:1px solid #E0E0DC;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Offwhite</div>
+          <div class="swatch-hex">#F5F5F3</div>
+          <div class="swatch-use">Page background</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#8A8A8A;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Grey</div>
+          <div class="swatch-hex">#8A8A8A</div>
+          <div class="swatch-use">Body text, labels, secondary copy</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#E0E0DC;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Light</div>
+          <div class="swatch-hex">#E0E0DC</div>
+          <div class="swatch-use">Borders, dividers</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#FFFFFF; border-bottom:1px solid #E0E0DC;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">White</div>
+          <div class="swatch-hex">#FFFFFF</div>
+          <div class="swatch-use">Cards, panels</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Typography -->
+  <div class="section">
+    <div class="section-label"><div class="line"></div><span>03 — Typography</span></div>
+    <h2>Type <em>System</em></h2>
+    <p style="margin:16px 0 24px;">Two fonts only. DM Sans for all UI and body text. Playfair Display for editorial or display use only.</p>
+
+    <div class="type-specimen">
+      <div class="specimen-label">DM Sans — Primary / UI font</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:42px;font-weight:900;color:#0D0D0D;line-height:1.1;">Premium Bedroom<br>Furniture</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:400;color:#8A8A8A;margin-top:16px;max-width:480px;">Supellex brings premium bedroom furniture — sliding wardrobes, vanity tables, bunk beds — directly to your home. No showroom markups. No compromise on quality.</div>
+    </div>
+
+    <div class="type-specimen">
+      <div class="specimen-label">Playfair Display — Display / editorial use</div>
+      <div style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#0D0D0D;line-height:1.1;">One Home<br>At a Time</div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <table>
+        <tr><th>Element</th><th>Font</th><th>Weight</th><th>Size</th></tr>
+        <tr><td>Page heading</td><td>DM Sans</td><td>900 (Black)</td><td>48–72px</td></tr>
+        <tr><td>Section heading</td><td>DM Sans</td><td>900 (Black)</td><td>24–32px</td></tr>
+        <tr><td>Card heading</td><td>DM Sans</td><td>900 (Black)</td><td>16–18px</td></tr>
+        <tr><td>Body copy</td><td>DM Sans</td><td>400</td><td>14px</td></tr>
+        <tr><td>Labels / caps</td><td>DM Sans</td><td>700</td><td>11px, tracking 0.25em</td></tr>
+        <tr><td>Display / tagline</td><td>Playfair Display</td><td>700</td><td>Display only</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 4. Logo -->
+  <div class="section">
+    <div class="section-label"><div class="line"></div><span>04 — Logo</span></div>
+    <h2>Logo <em>Usage</em></h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;">
+      <div class="card" style="display:flex;align-items:center;justify-content:center;min-height:120px;">
+        <img src="/supellex-logo.png" alt="Supellex logo on white" style="max-height:60px;max-width:200px;">
+      </div>
+      <div class="card" style="background:#0D0D0D;display:flex;align-items:center;justify-content:center;min-height:120px;">
+        <img src="/supellex-logo.png" alt="Supellex logo on black" style="max-height:60px;max-width:200px;filter:brightness(0) invert(1);">
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <table>
+        <tr><th>Rule</th><th>Guidance</th></tr>
+        <tr><td>On light backgrounds</td><td>Use logo as-is (full colour)</td></tr>
+        <tr><td>On dark backgrounds</td><td>Apply <code>filter: brightness(0) invert(1)</code> for white version</td></tr>
+        <tr><td>Minimum size</td><td>64px height desktop · 48px mobile</td></tr>
+        <tr><td>Clear space</td><td>At least the height of the "S" on all four sides</td></tr>
+        <tr><td>Never</td><td>Add background box, drop shadow, outline, or stretched proportions</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 5. UI Patterns -->
+  <div class="section">
+    <div class="section-label"><div class="line"></div><span>05 — UI Patterns</span></div>
+    <h2>UI <em>Components</em></h2>
+
+    <h3 style="margin-top:32px;">Page Banner</h3>
+    <div class="pattern-banner">
+      <div class="section-label"><div class="line"></div><span>Section Label</span></div>
+      <h3>Page Heading <em>In Red</em></h3>
+    </div>
+    <p>Every page opens with a black banner, 4px red top line, red label with line, then large heading with highlight word(s) in red.</p>
+
+    <h3 style="margin-top:32px;">Buttons</h3>
+    <div class="btn-row">
+      <button class="btn-primary">Shop Now</button>
+      <button class="btn-secondary">View Terms & Conditions</button>
+    </div>
+    <p style="margin-top:12px;">Sharp corners throughout — no border-radius on any element.</p>
+
+    <h3 style="margin-top:32px;">Cards & Panels</h3>
+    <div class="card">
+      <p>White background, 1px border in <code>#E0E0DC</code>, padding 32px. Used for all content panels, FAQ items, and policy sections.</p>
+    </div>
+  </div>
+
+  <!-- 6. Tone of Voice -->
+  <div class="section">
+    <div class="section-label"><div class="line"></div><span>06 — Voice</span></div>
+    <h2>Tone of <em>Voice</em></h2>
+    <p style="margin:16px 0 24px;">Supellex speaks like a confident, knowledgeable brand — not a salesperson. Every word should earn its place.</p>
+
+    <div class="two-col">
+      <div class="voice-do">
+        <h3>Do</h3>
+        <ul style="margin-top:12px;">
+          <li>Short, punchy sentences</li>
+          <li>Benefit-first copy</li>
+          <li>British spelling always</li>
+          <li>Formal but warm in policies</li>
+          <li>Let the product speak</li>
+        </ul>
+      </div>
+      <div class="voice-dont">
+        <h3>Don't</h3>
+        <ul style="margin-top:12px;">
+          <li>Exclamation marks</li>
+          <li>Vague filler ("amazing quality")</li>
+          <li>American spelling</li>
+          <li>Over-use of "We" / "Our"</li>
+          <li>Emoji in formal copy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <table>
+        <tr><th>Instead of</th><th>Write</th></tr>
+        <tr><td>Great value for money</td><td>Premium quality. Fair price. No showroom markup.</td></tr>
+        <tr><td>Amazing wardrobe!</td><td>Our best-spec wardrobe — zero compromise.</td></tr>
+        <tr><td>We offer free shipping</td><td>Free UK delivery on every order.</td></tr>
+        <tr><td>customize</td><td>customise</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 7. Contact -->
+  <div class="section">
+    <div class="section-label"><div class="line"></div><span>07 — Contact</span></div>
+    <h2>Contact <em>Details</em></h2>
+    <p style="margin:16px 0 24px;">Use these exact addresses in all customer-facing copy. Do not mix them up.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="label">Customer Support</div>
+        <div class="value">support@supellex.co.uk</div>
+      </div>
+      <div class="contact-card">
+        <div class="label">General Enquiries</div>
+        <div class="value">info@supellex.co.uk</div>
+      </div>
+      <div class="contact-card">
+        <div class="label">WhatsApp</div>
+        <div class="value">+44 7391 858618</div>
+      </div>
+      <div class="contact-card">
+        <div class="label">Website</div>
+        <div class="value">www.supellex.co.uk</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>Supellex &nbsp;·&nbsp; <strong>Brand Guidelines</strong> &nbsp;·&nbsp; Confidential &nbsp;·&nbsp; 2026</p>
+</div>
+
+</body>
+</html>
