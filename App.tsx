@@ -24,7 +24,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <Header
         onNavClick={(href) => navigate(`/${href}`)}
         onProductClick={(id) => navigate(`/product/${id}`)}
-        onCartClick={() => { if ((window as any).Ecwid?.openPage) { (window as any).Ecwid.openPage('cart'); } else { navigate('/products'); } }}
+        onCartClick={() => navigate('/products?opencart=1')}
       />
       {children}
       <Footer onNavClick={(href) => navigate(`/${href}`)} />

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 declare global {
   interface Window {
@@ -7,6 +8,8 @@ declare global {
     Ecwid?: {
       init: () => void;
       destroy: () => void;
+      openPage: (page: string) => void;
+      OnAPILoaded: { add: (fn: () => void) => void };
     };
   }
 }
@@ -14,6 +17,9 @@ declare global {
 const STORE_ID = '135961507';
 
 export default function EcwidStorePage() {
+  const location = useLocation();
+  const openCart = new URLSearchParams(location.search).get('opencart') === '1';
+
   useEffect(() => {
     window.ecwid_dynamic_widgets = true;
 
@@ -29,13 +35,26 @@ export default function EcwidStorePage() {
       }
     };
 
+    const tryOpenCart = () => {
+      if (openCart && window.Ecwid?.openPage) {
+        window.Ecwid.openPage('cart');
+      }
+    };
+
     if (window.xProductBrowser) {
       mountStore();
+      // Ecwid already loaded — wait for API ready then open cart
+      if (openCart) {
+        window.Ecwid?.OnAPILoaded?.add(tryOpenCart) ?? setTimeout(tryOpenCart, 800);
+      }
     } else {
       const interval = setInterval(() => {
         if (window.xProductBrowser) {
           clearInterval(interval);
           mountStore();
+          if (openCart) {
+            window.Ecwid?.OnAPILoaded?.add(tryOpenCart) ?? setTimeout(tryOpenCart, 800);
+          }
         }
       }, 100);
       return () => clearInterval(interval);
@@ -44,7 +63,7 @@ export default function EcwidStorePage() {
     return () => {
       window.Ecwid?.destroy();
     };
-  }, []);
+  }, [openCart]);
 
   return (
     <main className="pt-24 min-h-screen bg-brand-offwhite">
