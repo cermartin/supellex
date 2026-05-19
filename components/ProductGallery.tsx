@@ -4,7 +4,7 @@ import { PRODUCTS } from '../constants';
 import { Product } from '../types';
 
 const CATEGORIES = ['All', 'Wardrobes', 'Dressing Tables', 'Kids Beds'];
-const FEATURED_IDS = ['1', '7', '9'];
+const FEATURED_IDS = ['2', '1', '9'];
 
 interface Props {
   onProductClick: (id: string) => void;

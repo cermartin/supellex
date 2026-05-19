@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 const PHOTOS = [
   {
     id: '1',
-    src: 'https://m.media-amazon.com/images/I/71wVg64P3QL._AC_SX300_SY300_QL70_ML2_.jpg',
+    src: '/inspired/lyon-white.jpg',
     label: 'Sliding Wardrobe with LED',
     tag: 'Wardrobes',
   },
@@ -15,7 +15,7 @@ const PHOTOS = [
   },
   {
     id: '2',
-    src: 'https://m.media-amazon.com/images/I/71ZJ+vMDOqL._AC_SX300_SY300_QL70_ML2_.jpg',
+    src: '/inspired/milan-white.jpg',
     label: 'Mirror Wardrobe — Best Seller',
     tag: 'Wardrobes',
   },
@@ -33,7 +33,7 @@ const PHOTOS = [
   },
   {
     id: '4',
-    src: 'https://m.media-amazon.com/images/I/71uX8qbWO9L._AC_SX300_SY300_QL70_ML2_.jpg',
+    src: '/inspired/oslo-white.jpg',
     label: 'Three-Panel Mirror Wardrobe',
     tag: 'Wardrobes',
   },

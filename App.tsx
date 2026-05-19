@@ -15,6 +15,7 @@ import ReviewsPage from './components/ReviewsPage';
 import FAQPage from './components/FAQPage';
 import TermsPage from './components/TermsPage';
 import WhySupellexPage from './components/WhySupellexPage';
+import ReviewsCTA from './components/ReviewsCTA';
 
 function Layout({ children }: { children: React.ReactNode }) {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <Header
         onNavClick={(href) => navigate(`/${href}`)}
         onProductClick={(id) => navigate(`/product/${id}`)}
-        onCartClick={() => navigate('/products')}
+        onCartClick={() => { if ((window as any).Ecwid?.openPage) { (window as any).Ecwid.openPage('cart'); } else { navigate('/products'); } }}
       />
       {children}
       <Footer onNavClick={(href) => navigate(`/${href}`)} />
@@ -51,6 +52,10 @@ function HomePage() {
         onBrowseAll={() => navigate('/products')}
       />
       <GetInspired onProductClick={() => navigate('/products')} />
+      <ReviewsCTA
+        onBrowse={() => navigate('/reviews')}
+        onLeave={() => { window.location.href = 'mailto:support@supellex.co.uk?subject=Product%20Review'; }}
+      />
     </>
   );
 }

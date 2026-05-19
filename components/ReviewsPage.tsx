@@ -48,7 +48,7 @@ export default function ReviewsPage() {
             <span className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase">Customer Reviews</span>
           </div>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
-            What Our <span className="text-brand-red">Customers</span> Say
+            Customer <span className="text-brand-red">Reviews</span>
           </h1>
           <p className="text-white/50 text-sm">{REVIEWS.length} verified reviews</p>
         </div>
@@ -68,6 +68,20 @@ export default function ReviewsPage() {
               <p className="text-brand-grey text-sm leading-relaxed">{r.body}</p>
             </div>
           ))}
+        </div>
+
+        {/* Leave a review CTA */}
+        <div className="mt-12 bg-brand-black px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 className="text-white font-black text-lg mb-1">Bought from Supellex?</h3>
+            <p className="text-white/40 text-sm">Share your experience and help other customers make the right choice.</p>
+          </div>
+          <a
+            href="mailto:support@supellex.co.uk?subject=Product%20Review"
+            className="flex-shrink-0 bg-brand-red hover:bg-brand-red-dark text-white font-black tracking-widest uppercase text-sm px-8 py-4 transition-colors"
+          >
+            Leave a Review
+          </a>
         </div>
       </div>
     </main>

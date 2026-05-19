@@ -65,6 +65,11 @@ export default function ShippingPage() {
             </PolicySection>
             <PolicySection label="Delivery Coverage" heading="Where do you deliver?">
               We deliver to most mainland UK locations. Deliveries to remote or extended areas — including parts of Scotland, Northern Ireland, and offshore locations — may be subject to additional charges or extended lead times. Please contact us before placing an order if you're unsure about your location.
+              <img
+                src="/delivery-map.jpg"
+                alt="UK delivery coverage map"
+                className="mt-4 max-w-xs w-full border border-brand-light"
+              />
             </PolicySection>
             <PolicySection label="Delivery Charges" heading="How is the cost calculated?">
               Delivery charges are calculated based on your delivery postcode and the size and weight of your order. All applicable costs are clearly displayed at checkout prior to payment.

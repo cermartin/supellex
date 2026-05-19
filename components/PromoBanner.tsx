@@ -12,9 +12,9 @@ const SLIDES: Slide[] = [
     tiles: ['P', 'R', 'E', 'M', 'I', 'U', 'M'],
     subtitle: 'Bedroom furniture built for real homes',
     ctas: [
-      { label: 'Wardrobes', href: 'products' },
-      { label: 'Dressing Tables', href: 'products' },
-      { label: 'Kids Beds', href: 'products' },
+      { label: 'Shop Wardrobes', href: 'products' },
+      { label: 'Shop Dressing Tables', href: 'products' },
+      { label: 'Shop Kids Beds', href: 'products' },
     ],
     image: 'https://m.media-amazon.com/images/I/71wVg64P3QL._AC_SX300_SY300_QL70_ML2_.jpg',
   },

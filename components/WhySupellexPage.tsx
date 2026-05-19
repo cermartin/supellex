@@ -28,8 +28,8 @@ const PILLARS = [
   {
     num: '05',
     icon: Truck,
-    title: 'Free UK Delivery',
-    body: 'We deliver to every corner of the UK, completely free. No minimum order, no hidden charges — just your furniture, at your door.',
+    title: 'Nationwide Delivery',
+    body: 'We deliver to addresses across the United Kingdom. Delivery costs are calculated at checkout based on your postcode and order size — all charges are shown upfront before you pay.',
   },
   {
     num: '06',
