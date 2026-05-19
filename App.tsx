@@ -1,7 +1,9 @@
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import PromoBanner from './components/PromoBanner';
 import ProductGallery from './components/ProductGallery';
+import GetInspired from './components/GetInspired';
 import EcwidStorePage from './components/EcwidStorePage';
 import BrandStatement from './components/BrandStatement';
 import Footer from './components/Footer';
@@ -21,6 +23,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <Header
         onNavClick={(href) => navigate(`/${href}`)}
         onProductClick={(id) => navigate(`/product/${id}`)}
+        onCartClick={() => navigate('/products')}
       />
       {children}
       <Footer onNavClick={(href) => navigate(`/${href}`)} />
@@ -41,11 +44,13 @@ function HomePage() {
   return (
     <>
       <Hero onShopClick={() => navigate('/products')} />
+      <PromoBanner onCtaClick={(href) => navigate(`/${href}`)} />
       <BrandStatement />
       <ProductGallery
         onProductClick={(id) => navigate(`/product/${id}`)}
         onBrowseAll={() => navigate('/products')}
       />
+      <GetInspired onProductClick={() => navigate('/products')} />
     </>
   );
 }

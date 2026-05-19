@@ -28,7 +28,7 @@ export default function BrandStatement() {
       <div className="py-20 px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="w-10 h-0.5 bg-brand-red mx-auto mb-6" />
-          <h2 className="font-serif text-4xl md:text-5xl text-white leading-snug mb-5">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-snug mb-5">
             Your home deserves better
           </h2>
           <p className="text-white/50 text-base leading-relaxed">

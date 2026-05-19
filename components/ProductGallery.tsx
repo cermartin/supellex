@@ -88,7 +88,7 @@ export default function ProductGallery({ onProductClick, onBrowseAll }: Props) {
               Featured Pieces
             </span>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl text-brand-black leading-tight max-w-lg">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-brand-black leading-tight max-w-lg">
             The pieces people keep coming back for
           </h2>
         </div>

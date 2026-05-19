@@ -40,14 +40,14 @@ export default function ReviewsPage() {
   return (
     <main className="pt-24 min-h-screen bg-brand-offwhite">
       {/* Banner */}
-      <div className="bg-brand-black py-20 px-6 relative">
+      <div className="bg-brand-black py-12 md:py-20 px-6 relative">
         <div className="absolute top-0 left-0 right-0 h-1 bg-brand-red" />
         <div className="max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 mb-4">
             <div className="w-8 h-px bg-brand-red" />
             <span className="text-brand-red text-xs font-bold tracking-[0.25em] uppercase">Customer Reviews</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-black text-white leading-tight mb-6">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
             What Our <span className="text-brand-red">Customers</span> Say
           </h1>
           <p className="text-white/50 text-sm">{REVIEWS.length} verified reviews</p>

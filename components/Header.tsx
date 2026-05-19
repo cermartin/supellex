@@ -30,7 +30,7 @@ export default function Header({ onNavClick, onProductClick, cartCount = 0, onCa
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
-          isScrolled ? 'py-2 shadow-md shadow-black/8' : 'py-3 border-b border-brand-light'
+          isScrolled ? 'py-1 md:py-2 shadow-md shadow-black/8' : 'py-2 md:py-3 border-b border-brand-light'
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 items-center">
@@ -62,7 +62,7 @@ export default function Header({ onNavClick, onProductClick, cartCount = 0, onCa
             className="flex flex-col justify-center items-center focus:outline-none"
             aria-label="Supellex home"
           >
-            <img src="/supellex-logo.png" alt="Supellex" className="h-20 w-auto object-contain" />
+            <img src="/supellex-logo.png" alt="Supellex" className="h-12 md:h-20 w-auto object-contain" />
             <span className="text-[10px] tracking-[0.18em] text-brand-grey font-bold -mt-1 hidden md:block">
               One Home At a Time…
             </span>

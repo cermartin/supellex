@@ -6,7 +6,7 @@ interface Props {
 
 export default function Hero({ onShopClick }: Props) {
   return (
-    <section className="relative h-screen min-h-[600px] max-h-[1000px] bg-brand-offwhite flex flex-col items-center justify-center text-center px-6 overflow-hidden pt-24">
+    <section className="relative min-h-[100svh] min-h-[600px] max-h-[1000px] bg-brand-offwhite flex flex-col items-center justify-center text-center px-4 md:px-6 overflow-hidden pt-20 md:pt-24">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-brand-offwhite to-brand-bg pointer-events-none" />
 
@@ -68,7 +68,7 @@ export default function Hero({ onShopClick }: Props) {
       </div>
 
       {/* Trust strip */}
-      <div className="relative z-10 flex justify-center gap-8 md:gap-16 text-center border-t border-brand-light pt-6 w-full max-w-md">
+      <div className="relative z-10 flex justify-center gap-6 md:gap-16 text-center border-t border-brand-light pt-5 md:pt-6 w-full max-w-md">
         {[
           { value: 'Nationwide', label: 'Delivery' },
           { value: 'UK', label: 'Based & Operated' },
