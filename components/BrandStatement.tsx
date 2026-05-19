@@ -13,8 +13,8 @@ const PILLARS = [
   },
   {
     icon: Truck,
-    title: 'Free UK Delivery',
-    body: 'We deliver to every postcode in the UK at no extra cost. Your order arrives packaged with care — ready to build, ready to enjoy.',
+    title: 'Nationwide Delivery',
+    body: 'We deliver to addresses across the United Kingdom using specialist furniture couriers. Delivery charges are calculated at checkout based on your postcode and order size.',
   },
 ];
 
